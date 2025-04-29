@@ -309,6 +309,8 @@ html, body {
 .how-it-works {
     padding: 100px 0;
     background-color: #fff;
+    position: relative;
+    z-index: 2;
 }
 
 .steps-container {
@@ -333,6 +335,7 @@ html, body {
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     position: relative;
+    width: 100%;
 }
 
 .steps-grid::before {
@@ -370,6 +373,9 @@ html, body {
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .step-number {
@@ -432,27 +438,35 @@ html, body {
 }
 
 /* Media Queries */
-@media (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
     .steps-grid {
-        display: grid;
+        display: grid !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     
     .steps-swiper {
         display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
     }
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .steps-grid {
         display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
     }
     
     .steps-swiper {
         display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .steps-grid {
         grid-template-columns: 1fr;
         gap: 30px;

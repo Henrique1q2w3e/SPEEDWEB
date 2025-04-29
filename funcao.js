@@ -59,11 +59,27 @@ document.addEventListener('DOMContentLoaded', function() {
         const stepsSwiper = document.querySelector('.steps-swiper');
         
         if (window.innerWidth >= 1025) {
-            if (stepsGrid) stepsGrid.style.display = 'grid';
-            if (stepsSwiper) stepsSwiper.style.display = 'none';
+            if (stepsGrid) {
+                stepsGrid.style.display = 'grid';
+                stepsGrid.style.visibility = 'visible';
+                stepsGrid.style.opacity = '1';
+            }
+            if (stepsSwiper) {
+                stepsSwiper.style.display = 'none';
+                stepsSwiper.style.visibility = 'hidden';
+                stepsSwiper.style.opacity = '0';
+            }
         } else {
-            if (stepsGrid) stepsGrid.style.display = 'none';
-            if (stepsSwiper) stepsSwiper.style.display = 'block';
+            if (stepsGrid) {
+                stepsGrid.style.display = 'none';
+                stepsGrid.style.visibility = 'hidden';
+                stepsGrid.style.opacity = '0';
+            }
+            if (stepsSwiper) {
+                stepsSwiper.style.display = 'block';
+                stepsSwiper.style.visibility = 'visible';
+                stepsSwiper.style.opacity = '1';
+            }
         }
     }
 
