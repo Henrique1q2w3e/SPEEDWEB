@@ -309,14 +309,6 @@ html, body {
 .how-it-works {
     padding: 100px 0;
     background-color: #fff;
-    position: relative;
-    z-index: 2;
-}
-
-.steps-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 .steps-title {
@@ -326,16 +318,14 @@ html, body {
     text-align: center;
     margin-bottom: 60px;
     letter-spacing: 2px;
-    font-weight: 300;
 }
 
-/* Estilos do Grid para Desktop */
+/* Grid para Desktop */
 .steps-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     position: relative;
-    width: 100%;
 }
 
 .steps-grid::before {
@@ -349,33 +339,21 @@ html, body {
     z-index: 1;
 }
 
-/* Estilos do Carrossel para Mobile */
+/* Carrossel para Mobile */
 .steps-swiper {
-    width: 100%;
-    padding: 20px 0;
     display: none;
 }
 
-.steps-swiper .swiper-slide {
-    width: 300px;
-    padding: 0 10px;
-}
-
-/* Estilos dos Cards */
+/* Cards */
 .step-card {
     background: #fff;
     padding: 30px;
     text-align: center;
     position: relative;
     z-index: 2;
-    transition: all 0.3s ease;
-    height: 100%;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(0, 0, 0, 0.03);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .step-number {
@@ -390,8 +368,6 @@ html, body {
     margin: 0 auto 20px;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.5rem;
-    font-weight: 300;
-    transition: all 0.3s ease;
 }
 
 .step-title {
@@ -400,88 +376,32 @@ html, body {
     color: #2c3e50;
     margin-bottom: 15px;
     letter-spacing: 1px;
-    font-weight: 300;
 }
 
 .step-description {
     color: #7f8c8d;
     font-size: 1rem;
     line-height: 1.6;
-    font-weight: 300;
-}
-
-.step-card:hover {
-    transform: translateY(-5px);
-}
-
-.step-card:hover .step-number {
-    background: #34495e;
-    transform: scale(1.1);
-}
-
-/* Estilos da paginação do Swiper */
-.swiper-pagination {
-    position: relative;
-    margin-top: 30px;
-}
-
-.swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    background: #2c3e50;
-    opacity: 0.3;
-}
-
-.swiper-pagination-bullet-active {
-    opacity: 1;
-    background: #2c3e50;
 }
 
 /* Media Queries */
-@media screen and (min-width: 1025px) {
+@media (max-width: 1024px) {
     .steps-grid {
-        display: grid !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-    
-    .steps-swiper {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .steps-grid {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-    }
-    
-    .steps-swiper {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .steps-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .steps-grid::before {
         display: none;
     }
-
-    .step-card {
-        padding: 25px;
+    
+    .steps-swiper {
+        display: block;
     }
+}
 
+@media (max-width: 768px) {
     .steps-title {
         font-size: 2.5rem;
         margin-bottom: 40px;
+    }
+    
+    .step-card {
+        padding: 25px;
     }
 }

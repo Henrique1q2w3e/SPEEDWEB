@@ -53,61 +53,42 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Verificar tamanho da tela e ajustar exibição
+    // Inicialização do Swiper
+    const stepsSwiper = new Swiper('.steps-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        }
+    });
+
+    // Verificação de tamanho de tela
     function checkScreenSize() {
-        const stepsGrid = document.querySelector('.steps-grid');
-        const stepsSwiper = document.querySelector('.steps-swiper');
+        const grid = document.querySelector('.steps-grid');
+        const swiper = document.querySelector('.steps-swiper');
         
         if (window.innerWidth >= 1025) {
-            if (stepsGrid) {
-                stepsGrid.style.display = 'grid';
-                stepsGrid.style.visibility = 'visible';
-                stepsGrid.style.opacity = '1';
-            }
-            if (stepsSwiper) {
-                stepsSwiper.style.display = 'none';
-                stepsSwiper.style.visibility = 'hidden';
-                stepsSwiper.style.opacity = '0';
-            }
+            grid.style.display = 'grid';
+            swiper.style.display = 'none';
         } else {
-            if (stepsGrid) {
-                stepsGrid.style.display = 'none';
-                stepsGrid.style.visibility = 'hidden';
-                stepsGrid.style.opacity = '0';
-            }
-            if (stepsSwiper) {
-                stepsSwiper.style.display = 'block';
-                stepsSwiper.style.visibility = 'visible';
-                stepsSwiper.style.opacity = '1';
-            }
+            grid.style.display = 'none';
+            swiper.style.display = 'block';
         }
     }
 
-    // Inicialização do Swiper
-    const stepsSwiper = document.querySelector('.steps-swiper');
-    if (stepsSwiper) {
-        new Swiper('.steps-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
-                }
-            }
-        });
-    }
-
     // Verificar tamanho da tela ao carregar e redimensionar
-    checkScreenSize();
+    window.addEventListener('load', checkScreenSize);
     window.addEventListener('resize', checkScreenSize);
 
     // Animação de scroll suave
