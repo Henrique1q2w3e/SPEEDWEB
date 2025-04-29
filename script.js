@@ -350,4 +350,92 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicialização
     updateNavigationButtons();
     console.log('Calculadora inicializada'); // Para debug
+
+    // Inicialização dos Carrosséis
+    const stepsSwiper = new Swiper('.steps-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            1024: {
+                slidesPerView: 5,
+                spaceBetween: 30
+            }
+        },
+        touchRatio: 1,
+        grabCursor: true,
+        resistance: true,
+        resistanceRatio: 0.85,
+        preventInteractionOnTransition: true,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true
+    });
+
+    const techSwiper = new Swiper('.tech-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            1024: {
+                slidesPerView: 6,
+                spaceBetween: 30
+            }
+        },
+        touchRatio: 1,
+        grabCursor: true,
+        resistance: true,
+        resistanceRatio: 0.85,
+        preventInteractionOnTransition: true,
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true
+    });
+
+    // Verificação de tamanho de tela para mostrar/esconder carrosséis
+    function checkScreenSize() {
+        const stepsGrid = document.querySelector('.steps-grid');
+        const stepsSwiperContainer = document.querySelector('.steps-swiper');
+        const techGrid = document.querySelector('.tech-grid');
+        const techSwiperContainer = document.querySelector('.tech-swiper');
+        
+        if (window.innerWidth >= 1024) {
+            if (stepsGrid) stepsGrid.style.display = 'grid';
+            if (stepsSwiperContainer) stepsSwiperContainer.style.display = 'none';
+            if (techGrid) techGrid.style.display = 'grid';
+            if (techSwiperContainer) techSwiperContainer.style.display = 'none';
+        } else {
+            if (stepsGrid) stepsGrid.style.display = 'none';
+            if (stepsSwiperContainer) stepsSwiperContainer.style.display = 'block';
+            if (techGrid) techGrid.style.display = 'none';
+            if (techSwiperContainer) techSwiperContainer.style.display = 'block';
+        }
+    }
+
+    // Verificar tamanho da tela ao carregar e redimensionar
+    window.addEventListener('load', checkScreenSize);
+    window.addEventListener('resize', checkScreenSize);
+
+    // Inicializar verificação
+    checkScreenSize();
 });

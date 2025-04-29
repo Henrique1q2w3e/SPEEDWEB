@@ -1312,3 +1312,74 @@ html, body {
         -webkit-appearance: none;
     }
 }
+
+/* Estilos dos Carrosséis */
+.steps-swiper,
+.tech-swiper {
+    display: none;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 30px;
+}
+
+.steps-swiper .swiper-slide,
+.tech-swiper .swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #D4AF37;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #D4AF37;
+}
+
+/* Ajustes para Mobile */
+@media (max-width: 1023px) {
+    .steps-grid,
+    .tech-grid {
+        display: none;
+    }
+
+    .steps-swiper,
+    .tech-swiper {
+        display: block;
+    }
+
+    .steps-swiper .step-card,
+    .tech-swiper .tech-card {
+        margin: 0 auto;
+        max-width: 300px;
+    }
+
+    .swiper-slide {
+        padding: 10px;
+    }
+}
+
+/* Melhorias na experiência touch */
+.swiper-container {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.swiper-slide {
+    touch-action: pan-y;
+}
