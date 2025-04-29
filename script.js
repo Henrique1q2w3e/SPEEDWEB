@@ -379,7 +379,17 @@ document.addEventListener('DOMContentLoaded', function() {
         resistanceRatio: 0.85,
         preventInteractionOnTransition: true,
         watchSlidesProgress: true,
-        watchSlidesVisibility: true
+        watchSlidesVisibility: true,
+        // Configurações específicas para iOS
+        touchStartPreventDefault: false,
+        touchMoveStopPropagation: false,
+        iOSEdgeSwipeDetection: true,
+        iOSEdgeSwipeThreshold: 20,
+        touchReleaseOnEdges: true,
+        followFinger: true,
+        threshold: 5,
+        touchAngle: 45,
+        simulateTouch: true
     });
 
     const techSwiper = new Swiper('.tech-swiper', {
@@ -409,7 +419,17 @@ document.addEventListener('DOMContentLoaded', function() {
         resistanceRatio: 0.85,
         preventInteractionOnTransition: true,
         watchSlidesProgress: true,
-        watchSlidesVisibility: true
+        watchSlidesVisibility: true,
+        // Configurações específicas para iOS
+        touchStartPreventDefault: false,
+        touchMoveStopPropagation: false,
+        iOSEdgeSwipeDetection: true,
+        iOSEdgeSwipeThreshold: 20,
+        touchReleaseOnEdges: true,
+        followFinger: true,
+        threshold: 5,
+        touchAngle: 45,
+        simulateTouch: true
     });
 
     // Verificação de tamanho de tela para mostrar/esconder carrosséis

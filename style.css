@@ -1320,6 +1320,8 @@ html, body {
     width: 100%;
     overflow: hidden;
     padding-bottom: 30px;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y pinch-zoom;
 }
 
 .steps-swiper .swiper-slide,
@@ -1328,11 +1330,16 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000;
 }
 
 .swiper-pagination {
     position: relative;
     margin-top: 20px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .swiper-pagination-bullet {
@@ -1340,6 +1347,7 @@ html, body {
     height: 10px;
     background: #D4AF37;
     opacity: 0.5;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .swiper-pagination-bullet-active {
@@ -1357,16 +1365,21 @@ html, body {
     .steps-swiper,
     .tech-swiper {
         display: block;
+        -webkit-overflow-scrolling: touch;
     }
 
     .steps-swiper .step-card,
     .tech-swiper .tech-card {
         margin: 0 auto;
         max-width: 300px;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 
     .swiper-slide {
         padding: 10px;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
@@ -1378,8 +1391,34 @@ html, body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 .swiper-slide {
-    touch-action: pan-y;
+    touch-action: pan-y pinch-zoom;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+/* Ajustes específicos para iOS */
+@supports (-webkit-touch-callout: none) {
+    .steps-swiper,
+    .tech-swiper {
+        -webkit-overflow-scrolling: touch;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .swiper-slide {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000;
+    }
+
+    .swiper-container {
+        -webkit-overflow-scrolling: touch;
+        overflow: hidden;
+        position: relative;
+    }
 }
