@@ -21,8 +21,11 @@
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="parallax">
@@ -145,84 +148,6 @@
                 </div>
             </section>
 
-            <!-- Seção Como Funciona -->
-            <section class="how-it-works">
-                <div class="steps-container">
-                    <h2 class="steps-title">Como Funciona</h2>
-                    
-                    <!-- Grid para Desktop -->
-                    <div class="steps-grid">
-                        <div class="step-card" data-aos="fade-up">
-                            <div class="step-number">1</div>
-                            <h3 class="step-title">Briefing</h3>
-                            <p class="step-description">Você preenche o briefing com suas necessidades e expectativas</p>
-                        </div>
-                        <div class="step-card" data-aos="fade-up" data-aos-delay="100">
-                            <div class="step-number">2</div>
-                            <h3 class="step-title">Criação</h3>
-                            <p class="step-description">Nossa equipe desenvolve seu site com tecnologia de ponta</p>
-                        </div>
-                        <div class="step-card" data-aos="fade-up" data-aos-delay="200">
-                            <div class="step-number">3</div>
-                            <h3 class="step-title">Aprovação</h3>
-                            <p class="step-description">Você analisa e aprova o projeto desenvolvido</p>
-                        </div>
-                        <div class="step-card" data-aos="fade-up" data-aos-delay="300">
-                            <div class="step-number">4</div>
-                            <h3 class="step-title">Publicação</h3>
-                            <p class="step-description">Seu site é publicado e otimizado para os buscadores</p>
-                        </div>
-                        <div class="step-card" data-aos="fade-up" data-aos-delay="400">
-                            <div class="step-number">5</div>
-                            <h3 class="step-title">Vendas</h3>
-                            <p class="step-description">Seu negócio começa a vender mais com o novo site</p>
-                        </div>
-                    </div>
-
-                    <!-- Carrossel para Mobile -->
-                    <div class="steps-swiper swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="step-card" data-aos="fade-up">
-                                    <div class="step-number">1</div>
-                                    <h3 class="step-title">Briefing</h3>
-                                    <p class="step-description">Você preenche o briefing com suas necessidades e expectativas</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="step-card" data-aos="fade-up" data-aos-delay="100">
-                                    <div class="step-number">2</div>
-                                    <h3 class="step-title">Criação</h3>
-                                    <p class="step-description">Nossa equipe desenvolve seu site com tecnologia de ponta</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="step-card" data-aos="fade-up" data-aos-delay="200">
-                                    <div class="step-number">3</div>
-                                    <h3 class="step-title">Aprovação</h3>
-                                    <p class="step-description">Você analisa e aprova o projeto desenvolvido</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="step-card" data-aos="fade-up" data-aos-delay="300">
-                                    <div class="step-number">4</div>
-                                    <h3 class="step-title">Publicação</h3>
-                                    <p class="step-description">Seu site é publicado e otimizado para os buscadores</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="step-card" data-aos="fade-up" data-aos-delay="400">
-                                    <div class="step-number">5</div>
-                                    <h3 class="step-title">Vendas</h3>
-                                    <p class="step-description">Seu negócio começa a vender mais com o novo site</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </section>
-
             <!-- Formulário de Orçamento -->
             <section id="quote" class="quote-section py-5">
                 <div class="container py-5">
@@ -299,6 +224,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-    <script src="funcao.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.querySelector('.video-background');
+            const parallax = document.querySelector('.parallax');
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            // Função para garantir que o vídeo está rodando (apenas desktop)
+            if (!isMobile) {
+                function ensureVideoIsPlaying() {
+                    if (video.paused) {
+                        video.play().catch(function(e) {
+                            console.log('Video play failed:', e);
+                        });
+                    }
+                }
+
+                // Tenta iniciar o vídeo imediatamente
+                ensureVideoIsPlaying();
+
+                // Verifica o vídeo a cada segundo
+                setInterval(ensureVideoIsPlaying, 1000);
+
+                // Reinicia o vídeo quando a página fica visível
+                document.addEventListener('visibilitychange', function() {
+                    if (!document.hidden) {
+                        ensureVideoIsPlaying();
+                    }
+                });
+
+                // Eventos touch para garantir que o vídeo continue rodando
+                document.addEventListener('touchstart', ensureVideoIsPlaying);
+                document.addEventListener('touchend', ensureVideoIsPlaying);
+
+                // Tenta reiniciar o vídeo se ele pausar
+                video.addEventListener('pause', ensureVideoIsPlaying);
+            }
+            
+            // Efeito parallax suave apenas para desktop
+            if (!isMobile) {
+                window.addEventListener('scroll', function() {
+                    let scrolled = window.pageYOffset;
+                    requestAnimationFrame(function() {
+                        video.style.transform = `translateY(${scrolled * 0.3}px)`;
+                    });
+                }, { passive: true });
+            }
+
+            // Inicializa AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true
+                });
+            }
+        });
+    </script>
 </body>
-</html>
+</html> 

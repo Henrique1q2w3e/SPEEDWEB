@@ -52,4 +52,59 @@ document.addEventListener('DOMContentLoaded', function() {
             once: true
         });
     }
+
+    // Verificar tamanho da tela e ajustar exibição
+    function checkScreenSize() {
+        const stepsGrid = document.querySelector('.steps-grid');
+        const stepsSwiper = document.querySelector('.steps-swiper');
+        
+        if (window.innerWidth >= 1025) {
+            if (stepsGrid) stepsGrid.style.display = 'grid';
+            if (stepsSwiper) stepsSwiper.style.display = 'none';
+        } else {
+            if (stepsGrid) stepsGrid.style.display = 'none';
+            if (stepsSwiper) stepsSwiper.style.display = 'block';
+        }
+    }
+
+    // Inicialização do Swiper
+    const stepsSwiper = document.querySelector('.steps-swiper');
+    if (stepsSwiper) {
+        new Swiper('.steps-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            }
+        });
+    }
+
+    // Verificar tamanho da tela ao carregar e redimensionar
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    // Animação de scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 });

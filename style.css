@@ -102,30 +102,115 @@ html, body {
 
 .main-content {
     position: relative;
-    background-color: #fff;
-    padding: 80px 0 0 0;
+    background-color: #f8f9fa;
+    padding: 120px 0;
     z-index: 5;
+    color: #2c3e50;
 }
 
 .section-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2c3e50, transparent);
 }
 
 .service-card {
-    background: #fff;
+    background: #ffffff;
     border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-    transition: all 0.3s ease;
+    padding: 45px 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(44, 62, 80, 0.03) 0%, rgba(44, 62, 80, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    color: #2c3e50;
+    letter-spacing: 1.5px;
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: 300;
+}
+
+.service-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background: #2c3e50;
+    transition: width 0.3s ease;
+}
+
+.service-card:hover h3::after {
+    width: 60px;
+}
+
+.service-card p {
+    color: #7f8c8d;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.service-card .icon {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    transition: all 0.4s ease;
+    display: inline-block;
+    opacity: 0.8;
+}
+
+.service-card:hover .icon {
+    transform: translateY(-5px);
+    opacity: 1;
 }
 
 @keyframes bounce {
@@ -185,5 +270,204 @@ html, body {
 
     .scroll-down {
         bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+    }
+
+    .service-card {
+        padding: 35px 25px;
+        margin-bottom: 30px;
+    }
+
+    .service-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+    }
+}
+
+/* Adicionando animação de brilho */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 255, 136, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 255, 136, 0.2);
+    }
+}
+
+/* Seção Como Funciona */
+.how-it-works {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.steps-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.steps-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+/* Estilos do Grid para Desktop */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    position: relative;
+}
+
+.steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #2c3e50, transparent);
+    z-index: 1;
+}
+
+/* Estilos do Carrossel para Mobile */
+.steps-swiper {
+    width: 100%;
+    padding: 20px 0;
+    display: none;
+}
+
+.steps-swiper .swiper-slide {
+    width: 300px;
+    padding: 0 10px;
+}
+
+/* Estilos dos Cards */
+.step-card {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    height: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: #2c3e50;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+.step-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.step-description {
+    color: #7f8c8d;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+}
+
+.step-card:hover .step-number {
+    background: #34495e;
+    transform: scale(1.1);
+}
+
+/* Estilos da paginação do Swiper */
+.swiper-pagination {
+    position: relative;
+    margin-top: 30px;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #2c3e50;
+    opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #2c3e50;
+}
+
+/* Media Queries */
+@media (min-width: 1025px) {
+    .steps-grid {
+        display: grid;
+    }
+    
+    .steps-swiper {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .steps-grid {
+        display: none !important;
+    }
+    
+    .steps-swiper {
+        display: block !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .steps-grid::before {
+        display: none;
+    }
+
+    .step-card {
+        padding: 25px;
+    }
+
+    .steps-title {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
     }
 }
