@@ -196,4 +196,158 @@ document.addEventListener('DOMContentLoaded', function() {
         updateProgress();
         updateButtons();
     }
+
+    // Calculadora de Orçamento
+    const calculatorSteps = document.querySelectorAll('.calculator-step');
+    const nextButton = document.getElementById('nextButton');
+    const backButton = document.getElementById('backButton');
+    const pagesRange = document.getElementById('pagesRange');
+    const pagesValue = document.querySelector('.pages-value');
+    const priceDisplay = document.querySelector('.price-display');
+    const whatsappButton = document.getElementById('whatsappButton');
+    
+    console.log('Elementos:', {
+        calculatorSteps,
+        nextButton,
+        backButton,
+        pagesRange,
+        pagesValue,
+        priceDisplay,
+        whatsappButton
+    }); // Para debug
+
+    // Estado da calculadora
+    let currentStep = 1;
+    let selectedType = '';
+    let selectedPages = 5;
+    let selectedFeatures = [];
+
+    // Preços base por tipo de site
+    const basePrices = {
+        'institucional': 1500,
+        'ecommerce': 3000,
+        'landing': 800
+    };
+
+    // Preços adicionais por funcionalidade
+    const featurePrices = {
+        'blog': 500,
+        'form': 200,
+        'gallery': 300,
+        'seo': 800,
+        'responsive': 400,
+        'analytics': 200
+    };
+
+    // Seleção de tipo de site
+    document.querySelectorAll('.option-card').forEach(card => {
+        card.addEventListener('click', function() {
+            console.log('Card clicado:', this.dataset.type); // Para debug
+            document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+            this.classList.add('selected');
+            selectedType = this.dataset.type;
+            console.log('Tipo selecionado:', selectedType); // Para debug
+        });
+    });
+
+    // Atualização do número de páginas
+    if (pagesRange && pagesValue) {
+        pagesRange.addEventListener('input', function() {
+            selectedPages = parseInt(this.value);
+            pagesValue.textContent = selectedPages;
+            console.log('Páginas selecionadas:', selectedPages); // Para debug
+        });
+    }
+
+    // Seleção de funcionalidades
+    document.querySelectorAll('.feature-option input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                selectedFeatures.push(this.value);
+            } else {
+                selectedFeatures = selectedFeatures.filter(feature => feature !== this.value);
+            }
+            console.log('Funcionalidades selecionadas:', selectedFeatures); // Para debug
+        });
+    });
+
+    // Navegação entre passos
+    if (nextButton) {
+        nextButton.addEventListener('click', function() {
+            console.log('Botão próximo clicado'); // Para debug
+            if (currentStep < calculatorSteps.length) {
+                if (currentStep === 1 && !selectedType) {
+                    alert('Por favor, selecione um tipo de site');
+                    return;
+                }
+
+                calculatorSteps[currentStep - 1].classList.remove('active');
+                currentStep++;
+                calculatorSteps[currentStep - 1].classList.add('active');
+                updateNavigationButtons();
+
+                if (currentStep === calculatorSteps.length) {
+                    calculatePrice();
+                }
+                console.log('Passo atual:', currentStep); // Para debug
+            }
+        });
+    }
+
+    if (backButton) {
+        backButton.addEventListener('click', function() {
+            console.log('Botão voltar clicado'); // Para debug
+            if (currentStep > 1) {
+                calculatorSteps[currentStep - 1].classList.remove('active');
+                currentStep--;
+                calculatorSteps[currentStep - 1].classList.add('active');
+                updateNavigationButtons();
+                console.log('Passo atual:', currentStep); // Para debug
+            }
+        });
+    }
+
+    // Atualização dos botões de navegação
+    function updateNavigationButtons() {
+        if (backButton) {
+            backButton.style.display = currentStep > 1 ? 'block' : 'none';
+        }
+        if (nextButton) {
+            nextButton.textContent = currentStep === calculatorSteps.length ? 'Recalcular' : 'Próximo';
+        }
+        console.log('Botões atualizados'); // Para debug
+    }
+
+    // Cálculo do preço final
+    function calculatePrice() {
+        let total = basePrices[selectedType] || 0;
+        console.log('Preço base:', total); // Para debug
+
+        // Adicionar custo por páginas extras (após 5 páginas)
+        if (selectedPages > 5) {
+            total += (selectedPages - 5) * 200;
+        }
+        console.log('Preço com páginas:', total); // Para debug
+
+        // Adicionar custo das funcionalidades selecionadas
+        selectedFeatures.forEach(feature => {
+            total += featurePrices[feature] || 0;
+        });
+        console.log('Preço final:', total); // Para debug
+
+        // Atualizar exibição do preço
+        if (priceDisplay) {
+            priceDisplay.textContent = `R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+        }
+
+        // Atualizar link do WhatsApp
+        if (whatsappButton) {
+            const message = `Olá! Gostaria de um orçamento para um site ${selectedType} com ${selectedPages} páginas e as seguintes funcionalidades: ${selectedFeatures.join(', ')}. Valor estimado: R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+            whatsappButton.href = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+        }
+    }
+
+    // Inicialização
+    updateNavigationButtons();
+    console.log('Calculadora inicializada'); // Para debug
 });

@@ -252,102 +252,103 @@
                 </div>
             </section>
 
-            <!-- Calculadora de Orçamento -->
-            <section id="calculator" class="calculator-section py-5">
-                <div class="container py-5">
-                    <div class="text-center mb-5">
-                        <h2 class="section-title" data-aos="fade-up">Calcule seu Orçamento</h2>
-                        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Responda algumas perguntas e receba uma estimativa</p>
-                    </div>
-
+            <!-- Calculator Section -->
+            <section class="calculator-section py-5">
+                <div class="container">
+                    <h2 class="text-center mb-5">Calcule o Orçamento do Seu Site</h2>
                     <div class="calculator-container">
-                        <div class="calculator-form">
-                            <!-- Tipo de Site -->
-                            <div class="calculator-step active" data-step="1">
-                                <h3>Qual tipo de site você precisa?</h3>
-                                <div class="options-grid">
-                                    <div class="option-card" data-value="institucional">
-                                        <i class="fas fa-building"></i>
-                                        <h4>Site Institucional</h4>
-                                        <p>Apresentação da empresa</p>
+                        <div class="calculator-steps">
+                            <!-- Step 1: Tipo de Site -->
+                            <div class="calculator-step active" id="step1">
+                                <h3>1. Tipo de Site</h3>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="option-card" data-type="institucional">
+                                            <i class="fas fa-building"></i>
+                                            <h4>Institucional</h4>
+                                            <p>Site para sua empresa ou organização</p>
+                                        </div>
                                     </div>
-                                    <div class="option-card" data-value="ecommerce">
-                                        <i class="fas fa-shopping-cart"></i>
-                                        <h4>E-commerce</h4>
-                                        <p>Loja virtual</p>
+                                    <div class="col-md-4">
+                                        <div class="option-card" data-type="ecommerce">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <h4>E-commerce</h4>
+                                            <p>Loja virtual completa</p>
+                                        </div>
                                     </div>
-                                    <div class="option-card" data-value="landing">
-                                        <i class="fas fa-rocket"></i>
-                                        <h4>Landing Page</h4>
-                                        <p>Página de conversão</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Número de Páginas -->
-                            <div class="calculator-step" data-step="2">
-                                <h3>Quantas páginas seu site terá?</h3>
-                                <div class="range-slider">
-                                    <input type="range" min="1" max="20" value="5" class="slider" id="pagesRange">
-                                    <div class="range-value">
-                                        <span id="pagesValue">5</span> páginas
+                                    <div class="col-md-4">
+                                        <div class="option-card" data-type="landing">
+                                            <i class="fas fa-rocket"></i>
+                                            <h4>Landing Page</h4>
+                                            <p>Página única para conversão</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                          
-                            <div class="calculator-step" data-step="3">
-                                <h3>Quais funcionalidades você precisa?</h3>
-                                <div class="features-grid">
-                                    <div class="feature-option">
-                                        <input type="checkbox" id="blog" value="blog">
-                                        <label for="blog">Blog</label>
+                            <!-- Step 2: Número de Páginas -->
+                            <div class="calculator-step" id="step2">
+                                <h3>2. Número de Páginas</h3>
+                                <div class="pages-slider">
+                                    <i class="fas fa-file-alt"></i>
+                                    <input type="range" class="form-range" id="pagesRange" min="5" max="20" value="5">
+                                    <div class="pages-value">5</div>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Recursos Adicionais -->
+                            <div class="calculator-step" id="step3">
+                                <h3>3. Recursos Adicionais</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="feature-option">
+                                            <input type="checkbox" id="blog" value="blog">
+                                            <label for="blog"><i class="fas fa-blog"></i> Blog</label>
+                                        </div>
+                                        <div class="feature-option">
+                                            <input type="checkbox" id="form" value="form">
+                                            <label for="form"><i class="fas fa-envelope"></i> Formulário de Contato</label>
+                                        </div>
+                                        <div class="feature-option">
+                                            <input type="checkbox" id="gallery" value="gallery">
+                                            <label for="gallery"><i class="fas fa-images"></i> Galeria de Imagens</label>
+                                        </div>
                                     </div>
-                                    <div class="feature-option">
-                                        <input type="checkbox" id="contact" value="contact">
-                                        <label for="contact">Formulário de Contato</label>
-                                    </div>
-                                    <div class="feature-option">
-                                        <input type="checkbox" id="gallery" value="gallery">
-                                        <label for="gallery">Galeria de Fotos</label>
-                                    </div>
-                                    <div class="feature-option">
-                                        <input type="checkbox" id="seo" value="seo">
-                                        <label for="seo">Otimização SEO</label>
-                                    </div>
-                                    <div class="feature-option">
-                                        <input type="checkbox" id="responsive" value="responsive">
-                                        <label for="responsive">Design Responsivo</label>
-                                    </div>
-                                    <div class="feature-option">
-                                        <input type="checkbox" id="analytics" value="analytics">
-                                        <label for="analytics">Google Analytics</label>
+                                    <div class="col-md-6">
+                                        <div class="feature-option">
+                                            <input type="checkbox" id="seo" value="seo">
+                                            <label for="seo"><i class="fas fa-search"></i> Otimização SEO</label>
+                                        </div>
+                                        <div class="feature-option">
+                                            <input type="checkbox" id="responsive" value="responsive">
+                                            <label for="responsive"><i class="fas fa-mobile-alt"></i> Design Responsivo</label>
+                                        </div>
+                                        <div class="feature-option">
+                                            <input type="checkbox" id="analytics" value="analytics">
+                                            <label for="analytics"><i class="fas fa-chart-line"></i> Google Analytics</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-           
-                            <div class="calculator-step" data-step="4">
-                                <div class="result-container">
-                                    <h3>Estimativa de Investimento</h3>
-                                    <div class="price-display">
-                                        <span class="currency">R$</span>
-                                        <span class="amount" id="finalPrice">0</span>
-                                    </div>
-                                    <p class="price-description">Valor estimado para seu projeto</p>
-                                    <div class="whatsapp-button-container">
-                                        <a href="#" id="whatsappLink" class="whatsapp-button" target="_blank">
-                                            <i class="fab fa-whatsapp"></i>
-                                            <span>Solicitar Orçamento Detalhado</span>
-                                        </a>
-                                    </div>
+                            <!-- Step 4: Resultado -->
+                            <div class="calculator-step" id="step4">
+                                <h3>4. Orçamento Estimado</h3>
+                                <div class="result-card">
+                                    <i class="fas fa-calculator"></i>
+                                    <div class="price-display">R$ 0,00</div>
+                                    <p class="mt-3">Este é um valor estimado baseado nas suas escolhas.</p>
+                                    <a href="#" class="btn btn-primary mt-3" id="whatsappButton">
+                                        <i class="fab fa-whatsapp"></i>
+                                        Falar com Especialista
+                                    </a>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="calculator-navigation">
-                                <button class="btn btn-secondary" id="prevStep">Voltar</button>
-                                <button class="btn btn-primary" id="nextStep">Próximo</button>
-                            </div>
+                        <div class="calculator-navigation">
+                            <button class="btn btn-outline-primary" id="backButton">Voltar</button>
+                            <button class="btn btn-primary" id="nextButton">Próximo</button>
                         </div>
                     </div>
                 </div>
@@ -593,9 +594,16 @@
     </div>
 
     <!-- Scripts com defer -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
-    <script src="funcao.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Inicialização do AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 </html>
