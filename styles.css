@@ -40,6 +40,8 @@ nav {
     margin: 0 auto;
 }
 
+
+
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
@@ -253,4 +255,61 @@ footer {
     .hero-content h1 {
         font-size: 2.5rem;
     }
+}
+
+/* Estilos para a seção de tecnologias */
+.tech-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tech-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+.tech-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.tech-card p {
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Cores específicas para cada tecnologia */
+.tech-card .fa-html5 {
+    color: #e34f26;
+}
+
+.tech-card .fa-css3-alt {
+    color: #264de4;
+}
+
+.tech-card .fa-bootstrap {
+    color: #7952b3;
+}
+
+.tech-card .fa-js {
+    color: #f7df1e;
+}
+
+.tech-card .fa-vuejs {
+    color: #42b883;
+}
+
+.tech-card .fa-code {
+    color: #6c757d;
 } 

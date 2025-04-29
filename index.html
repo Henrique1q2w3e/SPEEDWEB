@@ -4,18 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPEEDWEB - Criação de Sites Rápidos e Modernos</title>
-    <meta name="description" content="Criação de sites profissionais, rápidos e modernos para impulsionar sua presença online. Solicite um orçamento!">
+    
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Criação de sites profissionais, rápidos e modernos para impulsionar sua presença online. Sites institucionais, e-commerce e landing pages com design responsivo.">
+    <meta name="keywords" content="criação de sites, desenvolvimento web, sites institucionais, e-commerce, landing page, design responsivo, SEO, otimização de sites">
+    <meta name="author" content="SPEEDWEB">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://speedweb.com.br/">
+    <meta property="og:title" content="SPEEDWEB - Criação de Sites Rápidos e Modernos">
+    <meta property="og:description" content="Criação de sites profissionais, rápidos e modernos para impulsionar sua presença online. Sites institucionais, e-commerce e landing pages com design responsivo.">
+    <meta property="og:image" content="https://speedweb.com.br/imagens/gold-poster.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://speedweb.com.br/">
+    <meta property="twitter:title" content="SPEEDWEB - Criação de Sites Rápidos e Modernos">
+    <meta property="twitter:description" content="Criação de sites profissionais, rápidos e modernos para impulsionar sua presença online. Sites institucionais, e-commerce e landing pages com design responsivo.">
+    <meta property="twitter:image" content="https://speedweb.com.br/imagens/gold-poster.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="imagens/raio.png">
-
+    <link rel="apple-touch-icon" href="imagens/raio.png">
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="funcao.js" as="script">
+    <link rel="preload" href="imagens/gold-poster.jpg" as="image">
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- AOS Animation Library -->
@@ -28,7 +50,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="parallax">
+    <div class="parallax" role="banner" aria-label="Banner principal">
         <video 
             autoplay 
             muted 
@@ -36,17 +58,23 @@
             playsinline 
             x5-playsinline
             class="video-background"
-            preload="auto"
+            preload="metadata"
+            loading="lazy"
+            poster="imagens/gold-poster.jpg"
+            data-src="./imagens/gold.mp4"
+            aria-label="Vídeo de fundo com efeito dourado"
         >
             <source src="./imagens/gold.mp4" type="video/mp4">
+            <source src="./imagens/gold.webm" type="video/webm">
+            <source src="./imagens/gold.ogv" type="video/ogg">
         </video>
         <div class="banner-content">
             <h1 class="fw-bold text-white">SITES QUE ACELERAM SEU NEGÓCIO</h1>
             <p class="lead text-white">Soluções web rápidas, modernas e eficientes para impulsionar sua presença digital</p>
-            <img src="imagens/raio.png" alt="SpeedWeb" class="img-fluid mb-3" width="64">
+            <img src="imagens/raio.png" alt="Logo SpeedWeb - Raio representando velocidade" class="img-fluid mb-3" width="64" loading="lazy" fetchpriority="high">
         </div>
-        <div class="scroll-down">
-            <svg viewBox="0 0 24 24">
+        <div class="scroll-down" role="button" aria-label="Rolar para baixo">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
             </svg>
         </div>
@@ -64,25 +92,24 @@
                     </div>
                     <div class="col-lg-6" data-aos="fade-left">
                         <div class="about-image-container">
-                            <img src="imagens/mascote.png" alt="SpeedWeb" class="img-fluid">
+                            <img src="imagens/mascote.png" alt="SpeedWeb" class="img-fluid" loading="lazy" width="400" height="400">
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Seção de Serviços -->
-            <section id="services" class="services-section py-5">
+            <section id="services" class="services-section py-5" aria-labelledby="services-title">
                 <div class="container py-5">
                     <div class="text-center mb-5">
-                        <h2 class="section-title" data-aos="fade-up">Nossos Serviços</h2>
+                        <h2 class="section-title" id="services-title" data-aos="fade-up">Nossos Serviços</h2>
                         <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Soluções completas para sua presença digital</p>
                     </div>
 
                     <div class="row g-4">
-                        <!-- Serviço 1 -->
                         <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                            <div class="service-card">
-                                <div class="service-icon">
+                            <div class="service-card" role="article">
+                                <div class="service-icon" aria-hidden="true">
                                     <i class="fas fa-laptop-code"></i>
                                 </div>
                                 <h3 class="service-title">Sites Institucionais</h3>
@@ -90,10 +117,10 @@
                             </div>
                         </div>
 
-                        <!-- Serviço 2 -->
+                      
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="service-card">
-                                <div class="service-icon">
+                            <div class="service-card" role="article">
+                                <div class="service-icon" aria-hidden="true">
                                     <i class="fas fa-shopping-cart"></i>
                                 </div>
                                 <h3 class="service-title">E-commerce</h3>
@@ -101,10 +128,10 @@
                             </div>
                         </div>
 
-                        <!-- Serviço 3 -->
+                    
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="service-card">
-                                <div class="service-icon">
+                            <div class="service-card" role="article">
+                                <div class="service-icon" aria-hidden="true">
                                     <i class="fas fa-mobile-alt"></i>
                                 </div>
                                 <h3 class="service-title">Sites Responsivos</h3>
@@ -112,10 +139,9 @@
                             </div>
                         </div>
 
-                        <!-- Serviço 4 -->
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="service-card">
-                                <div class="service-icon">
+                            <div class="service-card" role="article">
+                                <div class="service-icon" aria-hidden="true">
                                     <i class="fas fa-search"></i>
                                 </div>
                                 <h3 class="service-title">SEO Otimizado</h3>
@@ -123,10 +149,10 @@
                             </div>
                         </div>
 
-                        <!-- Serviço 5 -->
+                  
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                            <div class="service-card">
-                                <div class="service-icon">
+                            <div class="service-card" role="article">
+                                <div class="service-icon" aria-hidden="true">
                                     <i class="fas fa-pen-fancy"></i>
                                 </div>
                                 <h3 class="service-title">Design Exclusivo</h3>
@@ -134,10 +160,10 @@
                             </div>
                         </div>
 
-                        <!-- Serviço 6 -->
+                       
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                            <div class="service-card">
-                                <div class="service-icon">
+                            <div class="service-card" role="article">
+                                <div class="service-icon" aria-hidden="true">
                                     <i class="fas fa-chart-line"></i>
                                 </div>
                                 <h3 class="service-title">Análise de Dados</h3>
@@ -148,7 +174,7 @@
                 </div>
             </section>
 
-            <!-- Seção Como Funciona -->
+        
             <section class="how-it-works">
                 <div class="container">
                     <h2 class="steps-title">Como Funciona</h2>
@@ -226,14 +252,242 @@
                 </div>
             </section>
 
+            <!-- Calculadora de Orçamento -->
+            <section id="calculator" class="calculator-section py-5">
+                <div class="container py-5">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title" data-aos="fade-up">Calcule seu Orçamento</h2>
+                        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Responda algumas perguntas e receba uma estimativa</p>
+                    </div>
+
+                    <div class="calculator-container">
+                        <div class="calculator-form">
+                            <!-- Tipo de Site -->
+                            <div class="calculator-step active" data-step="1">
+                                <h3>Qual tipo de site você precisa?</h3>
+                                <div class="options-grid">
+                                    <div class="option-card" data-value="institucional">
+                                        <i class="fas fa-building"></i>
+                                        <h4>Site Institucional</h4>
+                                        <p>Apresentação da empresa</p>
+                                    </div>
+                                    <div class="option-card" data-value="ecommerce">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <h4>E-commerce</h4>
+                                        <p>Loja virtual</p>
+                                    </div>
+                                    <div class="option-card" data-value="landing">
+                                        <i class="fas fa-rocket"></i>
+                                        <h4>Landing Page</h4>
+                                        <p>Página de conversão</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Número de Páginas -->
+                            <div class="calculator-step" data-step="2">
+                                <h3>Quantas páginas seu site terá?</h3>
+                                <div class="range-slider">
+                                    <input type="range" min="1" max="20" value="5" class="slider" id="pagesRange">
+                                    <div class="range-value">
+                                        <span id="pagesValue">5</span> páginas
+                                    </div>
+                                </div>
+                            </div>
+
+                          
+                            <div class="calculator-step" data-step="3">
+                                <h3>Quais funcionalidades você precisa?</h3>
+                                <div class="features-grid">
+                                    <div class="feature-option">
+                                        <input type="checkbox" id="blog" value="blog">
+                                        <label for="blog">Blog</label>
+                                    </div>
+                                    <div class="feature-option">
+                                        <input type="checkbox" id="contact" value="contact">
+                                        <label for="contact">Formulário de Contato</label>
+                                    </div>
+                                    <div class="feature-option">
+                                        <input type="checkbox" id="gallery" value="gallery">
+                                        <label for="gallery">Galeria de Fotos</label>
+                                    </div>
+                                    <div class="feature-option">
+                                        <input type="checkbox" id="seo" value="seo">
+                                        <label for="seo">Otimização SEO</label>
+                                    </div>
+                                    <div class="feature-option">
+                                        <input type="checkbox" id="responsive" value="responsive">
+                                        <label for="responsive">Design Responsivo</label>
+                                    </div>
+                                    <div class="feature-option">
+                                        <input type="checkbox" id="analytics" value="analytics">
+                                        <label for="analytics">Google Analytics</label>
+                                    </div>
+                                </div>
+                            </div>
+
+           
+                            <div class="calculator-step" data-step="4">
+                                <div class="result-container">
+                                    <h3>Estimativa de Investimento</h3>
+                                    <div class="price-display">
+                                        <span class="currency">R$</span>
+                                        <span class="amount" id="finalPrice">0</span>
+                                    </div>
+                                    <p class="price-description">Valor estimado para seu projeto</p>
+                                    <div class="whatsapp-button-container">
+                                        <a href="#" id="whatsappLink" class="whatsapp-button" target="_blank">
+                                            <i class="fab fa-whatsapp"></i>
+                                            <span>Solicitar Orçamento Detalhado</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="calculator-navigation">
+                                <button class="btn btn-secondary" id="prevStep">Voltar</button>
+                                <button class="btn btn-primary" id="nextStep">Próximo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de Tecnologias -->
+            <section id="technologies" class="py-5" aria-labelledby="technologies-title">
+                <div class="container">
+                    <h2 class="text-center mb-5" id="technologies-title">TECNOLOGIAS QUE UTILIZAMOS</h2>
+                    
+                    <!-- Grid para Desktop -->
+                    <div class="tech-grid" role="list">
+                        <div class="tech-card" role="listitem">
+                            <i class="fab fa-html5" aria-hidden="true"></i>
+                            <h3>HTML5</h3>
+                            <p>Estruturação semântica e moderna para web</p>
+                        </div>
+                        <div class="tech-card" role="listitem">
+                            <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                            <h3>CSS3</h3>
+                            <p>Estilização avançada e responsiva</p>
+                        </div>
+                        <div class="tech-card" role="listitem">
+                            <i class="fab fa-bootstrap" aria-hidden="true"></i>
+                            <h3>Bootstrap</h3>
+                            <p>Framework para desenvolvimento rápido</p>
+                        </div>
+                        <div class="tech-card" role="listitem">
+                            <i class="fab fa-js" aria-hidden="true"></i>
+                            <h3>JavaScript</h3>
+                            <p>Interatividade e dinamismo</p>
+                        </div>
+                        <div class="tech-card" role="listitem">
+                            <i class="fab fa-vuejs" aria-hidden="true"></i>
+                            <h3>Vue.js</h3>
+                            <p>Framework progressivo para interfaces</p>
+                        </div>
+                        <div class="tech-card" role="listitem">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                            <h3>Outras</h3>
+                            <p>E muito mais para seu projeto</p>
+                        </div>
+                    </div>
+
+                    <!-- Slider para Mobile -->
+                    <div class="tech-swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="tech-card">
+                                    <i class="fab fa-html5"></i>
+                                    <h3>HTML5</h3>
+                                    <p>Estruturação semântica e moderna para web</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech-card">
+                                    <i class="fab fa-css3-alt"></i>
+                                    <h3>CSS3</h3>
+                                    <p>Estilização avançada e responsiva</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech-card">
+                                    <i class="fab fa-bootstrap"></i>
+                                    <h3>Bootstrap</h3>
+                                    <p>Framework para desenvolvimento rápido</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech-card">
+                                    <i class="fab fa-js"></i>
+                                    <h3>JavaScript</h3>
+                                    <p>Interatividade e dinamismo</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech-card">
+                                    <i class="fab fa-vuejs"></i>
+                                    <h3>Vue.js</h3>
+                                    <p>Framework progressivo para interfaces</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tech-card">
+                                    <i class="fas fa-code"></i>
+                                    <h3>Outras</h3>
+                                    <p>E muito mais para seu projeto</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Formulário de Orçamento -->
-            <section id="quote" class="quote-section py-5">
+            <section id="quote" class="quote-section py-5" aria-labelledby="quote-title">
                 <div class="container py-5">
                     <div class="row">
-                        <div class="col-lg-6 mx-auto">
+                        <div class="col-lg-8 mx-auto">
                             <div class="quote-form-container" data-aos="fade-up">
-                                <h2 class="text-center mb-4">Entre em Contato</h2>
-                                <a href="https://wa.me/seu-numero-aqui?text=Olá! Gostaria de um orçamento para meu site." target="_blank" class="btn btn-primary submit-btn w-100">Enviar no WhatsApp</a>
+                                <div class="text-center mb-4">
+                                    <i class="fas fa-comments contact-icon mb-3" aria-hidden="true"></i>
+                                    <h2 class="section-title" id="quote-title">Vamos Conversar?</h2>
+                                    <p class="lead text-muted">Estamos prontos para transformar sua ideia em realidade</p>
+                                </div>
+                                
+                                <div class="contact-info mb-4" role="complementary">
+                                    <div class="row g-4">
+                                        <div class="col-md-4">
+                                            <div class="info-card" role="article">
+                                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                                <h4>Resposta Rápida</h4>
+                                                <p>Respondemos em até 24h</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="info-card" role="article">
+                                                <i class="fas fa-handshake" aria-hidden="true"></i>
+                                                <h4>Orçamento Grátis</h4>
+                                                <p>Sem compromisso</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="info-card" role="article">
+                                                <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                                                <h4>Garantia</h4>
+                                                <p>100% de satisfação</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="whatsapp-button-container text-center">
+                                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de um orçamento para meu site." target="_blank" class="whatsapp-button" aria-label="Fale conosco pelo WhatsApp">
+                                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                        <span>Fale Conosco pelo WhatsApp</span>
+                                        <small>Respondemos em até 24h</small>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -241,67 +495,107 @@
             </section>
 
             <!-- Footer -->
-            <footer class="footer-section py-4">
+            <footer class="footer-section py-5" role="contentinfo">
                 <div class="container">
                     <div class="row gy-4">
+                        <!-- Logo e Descrição -->
                         <div class="col-lg-4" data-aos="fade-up">
-                            <div class="footer-logo">
-                                <img src="imagens/speed.png" alt="SPEEDWEB Logo" class="footer-logo-img">
+                            <div class="footer-brand">
+                                <img src="imagens/speed.png" alt="SPEEDWEB Logo - Empresa de criação de sites" class="footer-logo-img mb-3" loading="lazy" width="180" height="60">
+                                <p class="footer-description">Transformamos ideias em experiências digitais excepcionais, criando sites que impulsionam seu negócio.</p>
+                                <div class="footer-social" role="list">
+                                    <a href="#" class="social-link" aria-label="Facebook" role="listitem">
+                                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" class="social-link" aria-label="Instagram" role="listitem">
+                                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" class="social-link" aria-label="LinkedIn" role="listitem">
+                                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" class="social-link" aria-label="WhatsApp" role="listitem">
+                                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                                    </a>
+                                </div>
                             </div>
-                            <p class="mt-3">Criamos sites que aceleram seu negócio e transformam visitantes em clientes.</p>
                         </div>
 
+                        <!-- Links Rápidos -->
                         <div class="col-lg-2" data-aos="fade-up" data-aos-delay="100">
                             <h4 class="footer-title">Links Rápidos</h4>
-                            <ul class="footer-links">
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#services">Serviços</a></li>
-                                <li><a href="#portfolio">Portfólio</a></li>
-                                <li><a href="#contact">Contato</a></li>
+                            <ul class="footer-links" role="list">
+                                <li role="listitem"><a href="#home"><i class="fas fa-chevron-right" aria-hidden="true"></i> Home</a></li>
+                                <li role="listitem"><a href="#services"><i class="fas fa-chevron-right" aria-hidden="true"></i> Serviços</a></li>
+                                <li role="listitem"><a href="#portfolio"><i class="fas fa-chevron-right" aria-hidden="true"></i> Portfólio</a></li>
+                                <li role="listitem"><a href="#contact"><i class="fas fa-chevron-right" aria-hidden="true"></i> Contato</a></li>
                             </ul>
                         </div>
 
+                        <!-- Serviços -->
                         <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                            <h4 class="footer-title">Serviços</h4>
-                            <ul class="footer-links">
-                                <li><a href="#services">Sites Institucionais</a></li>
-                                <li><a href="#services">E-commerce</a></li>
-                                <li><a href="#services">Sites Responsivos</a></li>
-                                <li><a href="#services">SEO Otimizado</a></li>
-                                <li><a href="#services">Design Exclusivo</a></li>
+                            <h4 class="footer-title">Nossos Serviços</h4>
+                            <ul class="footer-links" role="list">
+                                <li role="listitem"><a href="#services"><i class="fas fa-check" aria-hidden="true"></i> Sites Institucionais</a></li>
+                                <li role="listitem"><a href="#services"><i class="fas fa-check" aria-hidden="true"></i> E-commerce</a></li>
+                                <li role="listitem"><a href="#services"><i class="fas fa-check" aria-hidden="true"></i> Sites Responsivos</a></li>
+                                <li role="listitem"><a href="#services"><i class="fas fa-check" aria-hidden="true"></i> SEO Otimizado</a></li>
+                                <li role="listitem"><a href="#services"><i class="fas fa-check" aria-hidden="true"></i> Design Exclusivo</a></li>
                             </ul>
                         </div>
 
+                        <!-- Contato -->
                         <div class="col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                            <h4 class="footer-title">Contato</h4>
-                            <ul class="footer-contact">
-                                <li><i class="fas fa-envelope"></i> contato@speedweb.com</li>
-                                <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
-                                <li><i class="fas fa-map-marker-alt"></i> São Paulo, SP - Brasil</li>
+                            <h4 class="footer-title">Entre em Contato</h4>
+                            <ul class="footer-contact" role="list">
+                                <li role="listitem">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <div>
+                                        <span>E-mail</span>
+                                        <a href="mailto:contato@speedweb.com">contato@speedweb.com</a>
+                                    </div>
+                                </li>
+                                <li role="listitem">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <div>
+                                        <span>Telefone</span>
+                                        <a href="tel:+5511999999999">(11) 99999-9999</a>
+                                    </div>
+                                </li>
+                                <li role="listitem">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    <div>
+                                        <span>Endereço</span>
+                                        <p>São Paulo, SP - Brasil</p>
+                                    </div>
+                                </li>
                             </ul>
-
-                            <div class="social-links mt-3">
-                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                            </div>
                         </div>
                     </div>
 
-                    <div class="copyright text-center mt-4">
-                        <p>&copy; 2024 SPEEDWEB. Todos os direitos reservados.</p>
+                    <!-- Copyright e Links Legais -->
+                    <div class="footer-bottom mt-5 pt-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <p class="copyright mb-0">&copy; 2024 SPEEDWEB. Todos os direitos reservados.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="footer-legal-links" role="list">
+                                    <li role="listitem"><a href="#">Política de Privacidade</a></li>
+                                    <li role="listitem"><a href="#">Termos de Uso</a></li>
+                                    <li role="listitem"><a href="#">Cookies</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </footer>
         </main>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <script src="funcao.js"></script>
+    <!-- Scripts com defer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+    <script src="funcao.js" defer></script>
 </body>
 </html>
