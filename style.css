@@ -12,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Otimização de fontes */
@@ -1592,5 +1593,565 @@ html, body {
     .email-marketing-features i {
         font-size: 1.1rem;
         margin-right: 0.8rem;
+    }
+}
+
+/* Seção de Planos de Manutenção */
+.maintenance-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.maintenance-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23D4AF37" fill-opacity="0.05" d="M50 0L100 50L50 100L0 50Z"/></svg>');
+    background-size: 200px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.maintenance-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    height: 100%;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.maintenance-card.featured {
+    transform: scale(1.05);
+    border: 2px solid #D4AF37;
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.1);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #D4AF37;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.plan-header h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 5px;
+}
+
+.currency {
+    font-size: 1.5rem;
+    color: #D4AF37;
+    font-weight: 500;
+}
+
+.amount {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.period {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.plan-features li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.plan-features i {
+    color: #D4AF37;
+    font-size: 1.1rem;
+}
+
+.plan-cta {
+    text-align: center;
+}
+
+.plan-cta .btn {
+    padding: 0.8rem 2rem;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.plan-cta .btn-primary {
+    background: #D4AF37;
+    border: none;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.plan-cta .btn-primary:hover {
+    background: #c19b2e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.plan-cta .btn-outline-primary {
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+}
+
+.plan-cta .btn-outline-primary:hover {
+    background: #D4AF37;
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .maintenance-card {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .maintenance-card.featured {
+        transform: none;
+    }
+
+    .plan-header h3 {
+        font-size: 1.8rem;
+    }
+
+    .amount {
+        font-size: 2.5rem;
+    }
+
+    .plan-features li {
+        font-size: 0.95rem;
+    }
+}
+
+/* Seção de Depoimentos */
+.testimonials-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23D4AF37" fill-opacity="0.05" d="M50 0L100 50L50 100L0 50Z"/></svg>');
+    background-size: 200px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.quote-icon {
+    color: #D4AF37;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.testimonial-text {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #D4AF37;
+}
+
+.author-info h4 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 0.3rem;
+}
+
+.author-info p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+    }
+
+    .author-image {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Seção de Estatísticas */
+.stats-section {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23D4AF37" fill-opacity="0.05" d="M50 0L100 50L50 100L0 50Z"/></svg>');
+    background-size: 200px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #D4AF37;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .stat-card {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .stat-icon {
+        font-size: 2rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+    }
+}
+
+/* Seção de Diferenciais */
+.differentials-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.differentials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23D4AF37" fill-opacity="0.05" d="M50 0L100 50L50 100L0 50Z"/></svg>');
+    background-size: 200px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.differential-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    text-align: center;
+}
+
+.differential-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.differential-icon {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.differential-card:hover .differential-icon {
+    transform: scale(1.1);
+}
+
+.differential-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.differential-text {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Seção de Valores */
+.values-section {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.values-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23D4AF37" fill-opacity="0.05" d="M50 0L100 50L50 100L0 50Z"/></svg>');
+    background-size: 200px;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.value-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+    transform: scale(1.1);
+}
+
+.value-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #D4AF37;
+}
+
+.value-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .differential-card,
+    .value-card {
+        padding: 1.5rem;
+    }
+
+    .differential-icon,
+    .value-icon {
+        font-size: 2rem;
+    }
+
+    .differential-title,
+    .value-title {
+        font-size: 1.2rem;
+    }
+
+    .differential-text,
+    .value-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Melhorias para Touch */
+@media (hover: none) {
+    .service-card,
+    .differential-card,
+    .value-card,
+    .testimonial-card {
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    .btn, .whatsapp-button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Otimização de Scroll */
+html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    overflow-x: hidden;
+    touch-action: pan-y;
+}
+
+/* Ajustes para iOS */
+@supports (-webkit-touch-callout: none) {
+    .banner-content {
+        padding-top: env(safe-area-inset-top);
+    }
+    
+    .footer-section {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    
+    .whatsapp-button {
+        -webkit-appearance: none;
+    }
+}
+
+/* Otimização de Carrosséis para Mobile */
+@media (max-width: 768px) {
+    .swiper-container {
+        padding-bottom: 30px;
+    }
+    
+    .swiper-pagination {
+        bottom: 10px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
+/* Ajustes de Espaçamento para Mobile */
+@media (max-width: 576px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-card,
+    .differential-card,
+    .value-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Otimização de Formulários para Mobile */
+@media (max-width: 576px) {
+    input, select, textarea, button {
+        font-size: 16px !important;
+    }
+    
+    .form-control {
+        height: 44px;
     }
 }

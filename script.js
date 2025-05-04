@@ -225,18 +225,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Preços base por tipo de site
     const basePrices = {
         'institucional': 1500,
-        'ecommerce': 3000,
-        'landing': 800
+        'ecommerce': 2300,
+        'landing': 1200
     };
 
     // Preços adicionais por funcionalidade
     const featurePrices = {
-        'blog': 500,
-        'form': 200,
-        'gallery': 300,
-        'seo': 800,
-        'responsive': 400,
-        'analytics': 200
+        'blog': 100,
+        'form': 250,
+        'gallery': 250,
+        'seo': 100,
+        'responsive': 100,
+        'analytics': 500
     };
 
     // Seleção de tipo de site
@@ -323,9 +323,9 @@ document.addEventListener('DOMContentLoaded', function() {
         let total = basePrices[selectedType] || 0;
         console.log('Preço base:', total); // Para debug
 
-        // Adicionar custo por páginas extras (após 5 páginas)
-        if (selectedPages > 5) {
-            total += (selectedPages - 5) * 200;
+        // Adicionar custo por páginas extras (após 1 página)
+        if (selectedPages > 1) {
+            total += (selectedPages - 1) * 200;
         }
         console.log('Preço com páginas:', total); // Para debug
 
@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Atualizar link do WhatsApp
         if (whatsappButton) {
-            const message = `Olá! Gostaria de um orçamento para um site ${selectedType} com ${selectedPages} páginas e as seguintes funcionalidades: ${selectedFeatures.join(', ')}. Valor estimado: R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+            const message = `Olá! Gostaria de um orçamento para um site ${selectedType} com ${selectedPages} página${selectedPages > 1 ? 's' : ''} e as seguintes funcionalidades: ${selectedFeatures.join(', ')}. Valor estimado: R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
             whatsappButton.href = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
         }
     }
@@ -458,4 +458,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Inicializar verificação
     checkScreenSize();
+
+    // Animação dos números das estatísticas
+    function animateStats() {
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const count = parseInt(target.getAttribute('data-count'));
+                    const duration = 2000; // 2 segundos
+                    const step = count / (duration / 16); // 60fps
+                    let current = 0;
+                    
+                    const timer = setInterval(() => {
+                        current += step;
+                        if (current >= count) {
+                            clearInterval(timer);
+                            current = count;
+                        }
+                        target.textContent = Math.floor(current);
+                    }, 16);
+                    
+                    observer.unobserve(target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        statNumbers.forEach(stat => observer.observe(stat));
+    }
+
+    // Inicializar animações quando o DOM estiver carregado
+    animateStats();
 });

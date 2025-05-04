@@ -485,4 +485,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
         images.forEach(img => imageObserver.observe(img));
     }
-});
+
+    // Interatividade dos Planos de Manutenção
+    document.querySelectorAll('.maintenance-card').forEach(card => {
+        // Efeito hover para cards não destacados
+        if (!card.classList.contains('featured')) {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.1)';
+            });
+
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+            });
+        }
+
+        // Evento de clique no botão de contratação
+        const ctaButton = card.querySelector('.plan-cta .btn');
+        if (ctaButton) {
+            ctaButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                const planName = card.querySelector('.plan-header h3').textContent;
+                const planPrice = card.querySelector('.price .amount').textContent;
+                
+                // Rola suavemente até o formulário de contato
+                const contactForm = document.getElementById('contact');
+                if (contactForm) {
+                    contactForm.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Após a rolagem, mostra um alerta com as informações do plano
+                    setTimeout(() => {
+                        alert(`Você selecionou o plano ${planName} no valor de R$ ${planPrice}/mês. Preencha o formulário abaixo para finalizar sua contratação.`);
+                    }, 1000);
+                }
+            });
+        }
+    });
+
+}); // Fim do DOMContentLoaded
