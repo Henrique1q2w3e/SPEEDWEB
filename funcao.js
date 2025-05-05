@@ -3,129 +3,38 @@ document.addEventListener('DOMContentLoaded', function() {
     const parallax = document.querySelector('.parallax');
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
-    // Cache do vídeo
-    let videoCache = null;
-    let isVideoLoaded = false;
-    let retryCount = 0;
-    const MAX_RETRIES = 3;
-    let lastPlayTime = 0;
-    let isRecovering = false;
-    
-    // Função para garantir que o vídeo está rodando
-    function ensureVideoIsPlaying() {
-        if (!video) return;
-        
-        if (video.paused) {
-            const playPromise = video.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(function(e) {
+    // Função para garantir que o vídeo está rodando (apenas desktop)
+    if (!isMobile) {
+        function ensureVideoIsPlaying() {
+            if (video.paused) {
+                video.play().catch(function(e) {
                     console.log('Video play failed:', e);
-                    // Tenta recarregar o vídeo se falhar
-                    video.load();
-                    setTimeout(() => {
-                        video.play().catch(function(e) {
-                            console.log('Video reload failed:', e);
-                        });
-                    }, 100);
                 });
             }
         }
-    }
 
-    // Função para pré-carregar o vídeo
-    function preloadVideo() {
-        if (!isVideoLoaded) {
-            video.load();
-            video.play().then(() => {
-                isVideoLoaded = true;
-                retryCount = 0;
-            }).catch(() => {
-                // Se falhar, tenta novamente em 500ms
-                setTimeout(preloadVideo, 500);
-            });
-        }
-    }
-
-    // Função para reiniciar o vídeo completamente
-    function restartVideo() {
-        if (isRecovering) return;
-        isRecovering = true;
-        
-        video.currentTime = lastPlayTime;
-        video.load();
-        video.play().then(() => {
-            isRecovering = false;
-            retryCount = 0;
-        }).catch(function(e) {
-            console.log('Video restart failed:', e);
-            setTimeout(() => {
-                isRecovering = false;
-                restartVideo();
-            }, 500);
-        });
-    }
-
-    // Salvar o tempo atual do vídeo periodicamente
-    setInterval(() => {
-        if (video && !video.paused) {
-            lastPlayTime = video.currentTime;
-        }
-    }, 1000);
-
-    // Configurações específicas para mobile
-    if (isMobile) {
-        video.setAttribute('playsinline', '');
-        video.setAttribute('x5-playsinline', '');
-        video.setAttribute('webkit-playsinline', '');
-        video.setAttribute('x5-video-player-type', 'h5');
-        video.setAttribute('x5-video-player-fullscreen', 'false');
-        video.setAttribute('preload', 'auto');
-        
-        // Força o carregamento do vídeo
-        preloadVideo();
-    }
-
-    // Eventos para manter o vídeo rodando
-    window.addEventListener('load', ensureVideoIsPlaying);
-    
-    // Quando a página recebe foco novamente
-    window.addEventListener('focus', ensureVideoIsPlaying);
-    
-    // Quando a página é mostrada novamente (incluindo quando volta do histórico)
-    window.addEventListener('pageshow', function(event) {
-        if (event.persisted) {
-            ensureVideoIsPlaying();
-        }
-    });
-
-    // Quando a visibilidade da página muda
-    document.addEventListener('visibilitychange', function() {
-        if (!document.hidden) {
-            ensureVideoIsPlaying();
-        }
-    });
-
-    // Eventos touch para garantir que o vídeo continue rodando
-    document.addEventListener('touchstart', ensureVideoIsPlaying);
-    document.addEventListener('touchend', ensureVideoIsPlaying);
-
-    // Tenta iniciar o vídeo imediatamente
-    ensureVideoIsPlaying();
-
-    // Verifica o vídeo periodicamente
-    setInterval(ensureVideoIsPlaying, 1000);
-
-    // Tenta reiniciar o vídeo se ele pausar
-    video.addEventListener('pause', function() {
-        setTimeout(ensureVideoIsPlaying, 100);
-    });
-    
-    video.addEventListener('ended', function() {
-        video.currentTime = 0;
+        // Tenta iniciar o vídeo imediatamente
         ensureVideoIsPlaying();
-    });
 
-    // Configurações para desktop
+        // Verifica o vídeo a cada segundo
+        setInterval(ensureVideoIsPlaying, 1000);
+
+        // Reinicia o vídeo quando a página fica visível
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                ensureVideoIsPlaying();
+            }
+        });
+
+        // Eventos touch para garantir que o vídeo continue rodando
+        document.addEventListener('touchstart', ensureVideoIsPlaying);
+        document.addEventListener('touchend', ensureVideoIsPlaying);
+
+        // Tenta reiniciar o vídeo se ele pausar
+        video.addEventListener('pause', ensureVideoIsPlaying);
+    }
+    
+    // Efeito parallax suave apenas para desktop
     if (!isMobile) {
         window.addEventListener('scroll', function() {
             let scrolled = window.pageYOffset;
