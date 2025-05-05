@@ -93,8 +93,35 @@ gap: 1rem;
 
 /* Otimização de media queries */
 @media (max-width: 768px) {
-.video-background {
+.parallax {
 height: 100vh;
+position: relative;
+background: #000;
+overflow: hidden;
+}
+
+.video-background {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transform: none !important;
+will-change: auto;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+perspective: 1000;
+transform: translateZ(0);
+}
+
+.banner-content {
+position: relative;
+z-index: 4;
+min-height: 100vh;
+padding: 20px 15px;
+transform: none;
+will-change: auto;
 }
 
 .content {
