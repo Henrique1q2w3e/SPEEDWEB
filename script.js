@@ -492,3 +492,105 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializar animações quando o DOM estiver carregado
     animateStats();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.querySelector('.video-background');
+    
+    function forcePlay() {
+        video.muted = true;
+        video.playsInline = true;
+        video.setAttribute('playsinline', '');
+        video.setAttribute('webkit-playsinline', '');
+        
+        const playPromise = video.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.catch(function(error) {
+                // Auto-retry on failure
+                setTimeout(forcePlay, 100);
+            });
+        }
+    }
+    
+    // Try to play as soon as possible
+    forcePlay();
+    
+    // Retry on page visibility change
+    document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) {
+            forcePlay();
+        }
+    });
+    
+    // Retry on focus
+    window.addEventListener('focus', forcePlay);
+    
+    // Prevent pause
+    video.addEventListener('pause', function() {
+        forcePlay();
+    });
+});
+
+// Smooth Scroll Implementation
+document.addEventListener('DOMContentLoaded', function() {
+    // Detect mobile device
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        // Optimize scroll performance
+        let ticking = false;
+        let lastScrollY = 0;
+        
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    const currentScrollY = window.scrollY;
+                    
+                    // Handle scroll changes
+                    if (Math.abs(currentScrollY - lastScrollY) > 5) {
+                        lastScrollY = currentScrollY;
+                    }
+                    
+                    ticking = false;
+                });
+                
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }
+});
+
+// Smooth scroll for the scroll-down button
+document.querySelector('.scroll-down').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const nextSection = document.querySelector('.main-content');
+    const offset = window.innerHeight;
+    
+    window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+    });
+}, { passive: false });
+
+// Optimize AOS animations for mobile
+AOS.init({
+    duration: 600,
+    once: true,
+    disable: window.innerWidth < 768,
+    startEvent: 'DOMContentLoaded'
+});
