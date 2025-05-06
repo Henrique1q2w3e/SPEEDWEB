@@ -26,6 +26,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="imagens/raio.png">
     <link rel="apple-touch-icon" href="imagens/raio.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
     
     <!-- Preload de recursos críticos -->
     <link rel="preload" href="style.css" as="style">
@@ -52,19 +55,21 @@
             autoplay 
             muted 
             loop 
-            playsinline
-            x5-video-player-type="h5"
-            x5-video-player-fullscreen="true"
-            x5-playsinline="true"
-            webkit-playsinline="true"
+            playsinline 
             class="video-background"
             preload="auto"
             aria-label="Vídeo de fundo com efeito dourado"
-            style="display: block !important; width: 100%; height: 100%; object-fit: cover; pointer-events: none;"
+            style="display: block !important; width: 100%; height: 100%; object-fit: cover;"
+            x-webkit-airplay="allow"
+            webkit-playsinline="true"
+            x5-playsinline="true"
+            x5-video-player-type="h5"
+            x5-video-player-fullscreen="true"
+            x5-video-orientation="portraint"
+            defaultMuted
         >
             <source src="imagens/gold.mp4" type="video/mp4">
-            <source src="imagens/gold.webm" type="video/webm">
-            Your browser does not support HTML5 video.
+            Seu navegador não suporta vídeos HTML5.
         </video>
         <div class="banner-content">
             <h1 class="fw-bold">SITES QUE ACELERAM SEU NEGÓCIO</h1>
@@ -97,7 +102,7 @@
             </div>
 
             <!-- Seção de Serviços -->
-            <section id="services" class="services-section py-5" aria-labelledby="services-title" data-aos="fade-up" data-aos-duration="600" style="transform: translate3d(0,0,0)">
+            <section id="services" class="services-section py-5" aria-labelledby="services-title">
                 <div class="container py-5">
                     <div class="text-center mb-5">
                         <h2 class="section-title" id="services-title" data-aos="fade-up">Nossos Serviços</h2>
@@ -221,7 +226,7 @@
                                 <p class="value-description">Buscamos constantemente novas tecnologias e abordagens para oferecer o melhor aos nossos clientes.</p>
                             </div>
                         </div>
-                        <div com="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
                             <div class="value-card">
                                 <i class="fas fa-handshake value-icon"></i>
                                 <h3 class="value-title">Compromisso</h3>
@@ -736,6 +741,51 @@
 
         // Tentar reproduzir quando a janela estiver carregada
         window.addEventListener('load', playVideo);
+
+        document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+      duration: 800, // Duração da animação
+      easing: 'ease-out-cubic', // Tipo de easing
+      once: false, // Se a animação deve ocorrer apenas uma vez
+      mirror: true, // Se os elementos devem animar ao rolar para cima
+      offset: 120, // Deslocamento do ponto de disparo
+      delay: 0 // Atraso padrão
+    });
+  });
+  
+  // Função para verificar se o dispositivo é móvel
+  function isMobileDevice() {
+    return (window.innerWidth <= 768) || 
+           (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+  }
+  
+  // Adiciona ou remove atributos de animação com base no tipo de dispositivo
+  function setupAnimations() {
+    const animElements = document.querySelectorAll('[data-mobile-animation]');
+    
+    animElements.forEach(element => {
+      const animationType = element.getAttribute('data-mobile-animation');
+      
+      // Aplica animações apenas em dispositivos móveis
+      if (isMobileDevice()) {
+        element.setAttribute('data-aos', animationType);
+      } else {
+        element.removeAttribute('data-aos');
+      }
+    });
+    
+    // Atualiza AOS para reconhecer as mudanças
+    if (typeof AOS !== 'undefined') {
+      AOS.refresh();
+    }
+  }
+  
+  // Configura as animações no carregamento
+  document.addEventListener('DOMContentLoaded', setupAnimations);
+  
+  // Reconfigura as animações quando a janela é redimensionada
+  window.addEventListener('resize', setupAnimations);
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </body>
 </html>
