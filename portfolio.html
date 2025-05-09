@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Templates - SPEEDWEB</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Explore nossa coleção de templates modernos para diferentes tipos de negócios">
+    <meta name="keywords" content="templates, sites, portfólio, barbearia, e-commerce, institucional">
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header class="portfolio-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="imagens/speed.png" alt="SPEEDWEB" height="40">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="portfolio.html">Portfólio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="portfolio-main">
+        <div class="container py-5">
+            <h1 class="text-center mb-5" data-aos="fade-up">Nossos Templates</h1>
+            
+            <!-- Template Categories -->
+            <div class="template-categories mb-5" data-aos="fade-up">
+                <div class="category-filters">
+                    <button class="btn btn-category active" data-category="all">Todos</button>
+                    <button class="btn btn-category" data-category="business">Negócios</button>
+                    <button class="btn btn-category" data-category="ecommerce">E-commerce</button>
+                    <button class="btn btn-category" data-category="service">Serviços</button>
+                    <button class="btn btn-category" data-category="fitness">Fitness</button>
+                    <button class="btn btn-category" data-category="health">Saúde</button>
+                </div>
+            </div>
+
+            <!-- Templates Grid -->
+            <div class="templates-grid">
+                <!-- Template Card - Barbearia -->
+                <div class="template-card" data-category="service" data-aos="fade-up">
+                    <div class="template-preview">
+                        <img src="templates/imagens/barbearia.jpg" alt="Template Barbearia">
+                        <div class="template-overlay">
+                            <button class="btn btn-view" data-template="barbearia">
+                                Visualizar Template
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Barbearia Moderna</h3>
+                        <p>Template completo para barbearias com sistema de agendamento</p>
+                        <div class="template-tags">
+                            <span class="tag">Agendamento</span>
+                            <span class="tag">Responsivo</span>
+                            <span class="tag">Moderno</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Card - E-commerce -->
+                <div class="template-card" data-category="ecommerce" data-aos="fade-up" data-aos-delay="100">
+                    <div class="template-preview">
+                        <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8" alt="Template E-commerce">
+                        <div class="template-overlay">
+                            <button class="btn btn-view" data-template="ecommerce">
+                                Visualizar Template
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h3>E-commerce Premium</h3>
+                        <p>Loja virtual completa com sistema de pagamentos integrado</p>
+                        <div class="template-tags">
+                            <span class="tag">Pagamentos</span>
+                            <span class="tag">Carrinho</span>
+                            <span class="tag">Responsivo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Card - Institucional -->
+                <div class="template-card" data-category="business" data-aos="fade-up" data-aos-delay="200">
+                    <div class="template-preview">
+                        <img src="templates/imagens/semente.jpg" alt="Template Institucional">
+                        <div class="template-overlay">
+                            <button class="btn btn-view" data-template="institucional">
+                                Visualizar Template
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Site Institucional</h3>
+                        <p>Template profissional para empresas e organizações</p>
+                        <div class="template-tags">
+                            <span class="tag">Profissional</span>
+                            <span class="tag">SEO</span>
+                            <span class="tag">Moderno</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Card - Loja de Suplementos -->
+                <div class="template-card" data-category="health" data-aos="fade-up" data-aos-delay="300">
+                    <div class="template-preview">
+                        <img src="/templates/imagens/suplementos.jpg" alt="Template Loja de Suplementos">
+                        <div class="template-overlay">
+                            <button class="btn btn-view" data-template="suplementos">
+                                Visualizar Template
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Loja de Suplementos</h3>
+                        <p>E-commerce especializado em produtos fitness e suplementos</p>
+                        <div class="template-tags">
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Pagamentos</span>
+                            <span class="tag">Responsivo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Card - Academia -->
+                <div class="template-card" data-category="fitness" data-aos="fade-up" data-aos-delay="400">
+                    <div class="template-preview">
+                        <img src="/templates/imagens/academia.jpg" alt="Template Academia">
+                        <div class="template-overlay">
+                            <button class="btn btn-view" data-template="academia">
+                                Visualizar Template
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Academia Fitness</h3>
+                        <p>Template completo para academias com sistema de agendamento e controle de alunos</p>
+                        <div class="template-tags">
+                            <span class="tag">Agendamento</span>
+                            <span class="tag">Área do Aluno</span>
+                            <span class="tag">Moderno</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Template Card - Coach Fitness -->
+                <div class="template-card" data-category="fitness" data-aos="fade-up" data-aos-delay="500">
+                    <div class="template-preview">
+                        <img src="/templates/imagens/coach.jpg" alt="Template Coach Fitness">
+                        <div class="template-overlay">
+                            <button class="btn btn-view" data-template="coach">
+                                Visualizar Template
+                            </button>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Coach Fitness</h3>
+                        <p>Site profissional para personal trainers com área de membros e sistema de consultoria</p>
+                        <div class="template-tags">
+                            <span class="tag">Área do Cliente</span>
+                            <span class="tag">Consultoria</span>
+                            <span class="tag">Fichas Online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Template Preview Modal -->
+    <div class="template-preview-modal" id="templatePreview">
+        <div class="template-preview-content">
+            <div class="template-preview-header">
+                <button class="btn btn-close-preview">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="template-preview-body">
+                <iframe id="templateFrame" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="portfolio.js"></script>
+</body>
+</html> 

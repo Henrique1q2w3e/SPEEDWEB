@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMANICO - Streetwear Urbano</title>
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h1>DEMANICO</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#calcas">Calças</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#camisetas">Camisetas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shorts">Shorts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#moletons">Moletons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tenis">Tênis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cart-icon" href="#carrinho">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">ELEVANDO O STREETWEAR</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Roupa urbana com atitude. Performance com estilo.</p>
+            <a href="#calcas" class="btn btn-primary" data-aos="fade-up" data-aos-delay="400">Ver Coleção</a>
+        </div>
+    </section>
+
+    <!-- Calças -->
+    <section id="calcas" class="category-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Calças</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="product-card" data-product-id="1">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8" alt="Calça Cargo">
+                            <div class="product-actions">
+                                <button class="btn-action view-product"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Calça Cargo</h3>
+                            <div class="product-price">
+                                <span class="price">R$ 249,90</span>
+                                <span class="old-price">R$ 299,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card" data-product-id="2">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Calça Jeans">
+                            <div class="product-actions">
+                                <button class="btn-action view-product"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Calça Jeans</h3>
+                            <div class="product-price">
+                                <span class="price">R$ 199,90</span>
+                                <span class="old-price">R$ 249,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card" data-product-id="3">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a" alt="Calça Jogger">
+                            <div class="product-actions">
+                                <button class="btn-action view-product"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Calça Jogger</h3>
+                            <div class="product-price">
+                                <span class="price">R$ 179,90</span>
+                                <span class="old-price">R$ 229,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Camisetas -->
+    <section id="camisetas" class="category-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Camisetas</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="product-card" data-product-id="4">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Camiseta Essential">
+                            <div class="product-actions">
+                                <button class="btn-action view-product"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta Essential</h3>
+                            <div class="product-price">
+                                <span class="price">R$ 129,90</span>
+                                <span class="old-price">R$ 159,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card" data-product-id="5">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a" alt="Camiseta Oversized">
+                            <div class="product-actions">
+                                <button class="btn-action view-product"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta Oversized</h3>
+                            <div class="product-price">
+                                <span class="price">R$ 149,90</span>
+                                <span class="old-price">R$ 189,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card" data-product-id="6">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1581655353564-df123a1eb820" alt="Camiseta Graphic">
+                            <div class="product-actions">
+                                <button class="btn-action view-product"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Camiseta Graphic</h3>
+                            <div class="product-price">
+                                <span class="price">R$ 169,90</span>
+                                <span class="old-price">R$ 199,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shorts -->
+    <section id="shorts" class="category-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Shorts</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="product-card" data-product-id="7">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1565084888279-aca607ecce0c" alt="Short Cargo">
+                            <div class="product-actions">
+                                <button class="btn-action view-product"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Short Cargo</h3>
+                            <div class="product-price">
+                                <span class="price">R$ 159,90</span>
+                                <span class="old-price">R$ 189,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card" data-product-id="8">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b" alt="Short Jeans">
+                            <div class="product-actions">
+                                <button class="btn-action view-product"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Short Jeans</h3>
+                            <div class="product-price">
+                                <span class="price">R$ 139,90</span>
+                                <span class="old-price">R$ 169,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Moletons -->
+    <section id="moletons" class="category-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Moletons</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="product-card" data-product-id="9">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7" alt="Moletom Oversized">
+                            <div class="product-actions">
+                                <button class="btn-action view-product"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Moletom Oversized</h3>
+                            <div class="product-price">
+                                <span class="price">R$ 299,90</span>
+                                <span class="old-price">R$ 349,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card" data-product-id="10">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531" alt="Moletom Com Capuz">
+                            <div class="product-actions">
+                                <button class="btn-action view-product"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Moletom Com Capuz</h3>
+                            <div class="product-price">
+                                <span class="price">R$ 329,90</span>
+                                <span class="old-price">R$ 379,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tênis -->
+    <section id="tenis" class="category-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Tênis</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="product-card" data-product-id="11">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Tênis Casual">
+                            <div class="product-actions">
+                                <button class="btn-action view-product"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Tênis Casual</h3>
+                            <div class="product-price">
+                                <span class="price">R$ 399,90</span>
+                                <span class="old-price">R$ 449,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card" data-product-id="12">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28" alt="Tênis Esportivo">
+                            <div class="product-actions">
+                                <button class="btn-action view-product"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Tênis Esportivo</h3>
+                            <div class="product-price">
+                                <span class="price">R$ 459,90</span>
+                                <span class="old-price">R$ 499,90</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal do Produto -->
+    <div class="product-overlay">
+        <div class="product-modal">
+            <button class="close-modal"><i class="fas fa-times"></i></button>
+            <div class="product-modal-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="product-gallery">
+                            <img src="" alt="Produto" class="main-image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-details">
+                            <h2 class="product-title"></h2>
+                            <div class="product-price">
+                                <span class="price"></span>
+                                <span class="old-price"></span>
+                            </div>
+                            <p class="product-description"></p>
+                            <div class="product-options">
+                                <div class="size-options">
+                                    <h4>Tamanho</h4>
+                                    <div class="size-buttons">
+                                        <button class="size-btn">P</button>
+                                        <button class="size-btn">M</button>
+                                        <button class="size-btn">G</button>
+                                        <button class="size-btn">GG</button>
+                                    </div>
+                                </div>
+                                <div class="quantity-selector">
+                                    <h4>Quantidade</h4>
+                                    <div class="quantity-controls">
+                                        <button class="quantity-btn minus">-</button>
+                                        <input type="number" value="1" min="1" max="10">
+                                        <button class="quantity-btn plus">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary add-to-cart">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal do Carrinho -->
+    <div class="cart-overlay">
+        <div class="cart-modal">
+            <button class="close-modal"><i class="fas fa-times"></i></button>
+            <div class="cart-content">
+                <h2>Seu Carrinho</h2>
+                <div class="cart-items">
+                    <!-- Items do carrinho serão inseridos aqui via JavaScript -->
+                </div>
+                <div class="cart-summary">
+                    <div class="subtotal">
+                        <span>Subtotal:</span>
+                        <span class="subtotal-value">R$ 0,00</span>
+                    </div>
+                    <div class="shipping">
+                        <span>Frete:</span>
+                        <span class="shipping-value">R$ 0,00</span>
+                    </div>
+                    <div class="total">
+                        <span>Total:</span>
+                        <span class="total-value">R$ 0,00</span>
+                    </div>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn btn-primary checkout">Finalizar Compra</button>
+                    <button class="btn btn-outline continue-shopping">Continuar Comprando</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>DEMANICO</h3>
+                    <p>Streetwear com atitude</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#calcas">Calças</a></li>
+                        <li><a href="#camisetas">Camisetas</a></li>
+                        <li><a href="#shorts">Shorts</a></li>
+                        <li><a href="#moletons">Moletons</a></li>
+                        <li><a href="#tenis">Tênis</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contato</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
+                        <li><i class="fas fa-envelope"></i> contato@demanico.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, SP</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Dados dos produtos (simulando um banco de dados)
+        const products = [
+            {
+                id: 1,
+                name: "Calça Cargo",
+                price: 249.90,
+                oldPrice: 299.90,
+                description: "Calça cargo com corte moderno e bolsos funcionais. Tecido resistente e confortável para o dia a dia.",
+                image: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8"
+            },
+            {
+                id: 2,
+                name: "Calça Jeans",
+                price: 199.90,
+                oldPrice: 249.90,
+                description: "Calça jeans com corte reto e lavagem moderna. Confortável e versátil para qualquer ocasião.",
+                image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246"
+            },
+            {
+                id: 3,
+                name: "Calça Jogger",
+                price: 179.90,
+                oldPrice: 229.90,
+                description: "Calça jogger com elástico na cintura e barra. Ideal para o dia a dia com estilo e conforto.",
+                image: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a"
+            },
+            {
+                id: 4,
+                name: "Camiseta Essential",
+                price: 129.90,
+                oldPrice: 159.90,
+                description: "Camiseta básica com corte moderno e tecido premium. Ideal para o dia a dia com conforto e estilo.",
+                image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
+            },
+            {
+                id: 5,
+                name: "Camiseta Oversized",
+                price: 149.90,
+                oldPrice: 189.90,
+                description: "Camiseta oversized com corte solto e tecido macio. Perfeita para um look despojado e confortável.",
+                image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a"
+            },
+            {
+                id: 6,
+                name: "Camiseta Graphic",
+                price: 169.90,
+                oldPrice: 199.90,
+                description: "Camiseta com estampa exclusiva e tecido de alta qualidade. Design único e moderno.",
+                image: "https://images.unsplash.com/photo-1581655353564-df123a1eb820"
+            },
+            {
+                id: 7,
+                name: "Short Cargo",
+                price: 159.90,
+                oldPrice: 189.90,
+                description: "Short cargo com bolsos funcionais e tecido resistente. Ideal para o dia a dia com estilo.",
+                image: "https://images.unsplash.com/photo-1565084888279-aca607ecce0c"
+            },
+            {
+                id: 8,
+                name: "Short Jeans",
+                price: 139.90,
+                oldPrice: 169.90,
+                description: "Short jeans com corte moderno e lavagem exclusiva. Versátil e confortável.",
+                image: "https://images.unsplash.com/photo-1591195853828-11db59a44f6b"
+            },
+            {
+                id: 9,
+                name: "Moletom Oversized",
+                price: 299.90,
+                oldPrice: 349.90,
+                description: "Moletom oversized com tecido macio e corte solto. Conforto máximo com estilo.",
+                image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7"
+            },
+            {
+                id: 10,
+                name: "Moletom Com Capuz",
+                price: 329.90,
+                oldPrice: 379.90,
+                description: "Moletom com capuz e bolsos frontais. Perfeito para dias mais frios com estilo.",
+                image: "https://images.unsplash.com/photo-1576871337622-98d48d1cf531"
+            },
+            {
+                id: 11,
+                name: "Tênis Casual",
+                price: 399.90,
+                oldPrice: 449.90,
+                description: "Tênis casual com design moderno e conforto excepcional. Ideal para o dia a dia.",
+                image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+            },
+            {
+                id: 12,
+                name: "Tênis Esportivo",
+                price: 459.90,
+                oldPrice: 499.90,
+                description: "Tênis esportivo com tecnologia de amortecimento e design exclusivo.",
+                image: "https://images.unsplash.com/photo-1600269452121-4f2416e55c28"
+            }
+        ];
+
+        // Carrinho de compras
+        let cart = [];
+
+        // Função para abrir o modal do produto
+        function openProductModal(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const overlay = document.querySelector('.product-overlay');
+            const modal = document.querySelector('.product-modal');
+            const mainImage = modal.querySelector('.main-image');
+            const title = modal.querySelector('.product-title');
+            const price = modal.querySelector('.price');
+            const oldPrice = modal.querySelector('.old-price');
+            const description = modal.querySelector('.product-description');
+
+            mainImage.src = product.image;
+            title.textContent = product.name;
+            price.textContent = `R$ ${product.price.toFixed(2)}`;
+            oldPrice.textContent = `R$ ${product.oldPrice.toFixed(2)}`;
+            description.textContent = product.description;
+            modal.dataset.productId = productId;
+
+            // Selecionar tamanho M por padrão
+            const sizeButtons = modal.querySelectorAll('.size-btn');
+            sizeButtons.forEach(btn => btn.classList.remove('selected'));
+            sizeButtons[1].classList.add('selected'); // M é o segundo botão
+
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Função para fechar o modal
+        function closeProductModal() {
+            const overlay = document.querySelector('.product-overlay');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Função para abrir o carrinho
+        function openCart() {
+            const overlay = document.querySelector('.cart-overlay');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            updateCartModal();
+        }
+
+        // Função para fechar o carrinho
+        function closeCart() {
+            const overlay = document.querySelector('.cart-overlay');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Função para adicionar ao carrinho
+        function addToCart(productId, quantity = 1, size = 'M') {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            const cartItem = {
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                quantity: quantity,
+                size: size,
+                image: product.image
+            };
+
+            const existingItem = cart.find(item => item.id === productId && item.size === size);
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push(cartItem);
+            }
+
+            updateCartCount();
+            closeProductModal();
+            openCart();
+        }
+
+        // Função para remover do carrinho
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartCount();
+            updateCartModal();
+        }
+
+        // Função para atualizar o contador do carrinho
+        function updateCartCount() {
+            const count = cart.reduce((total, item) => total + item.quantity, 0);
+            document.querySelector('.cart-count').textContent = count;
+        }
+
+        // Função para atualizar o modal do carrinho
+        function updateCartModal() {
+            const cartItems = document.querySelector('.cart-items');
+            const subtotalValue = document.querySelector('.subtotal-value');
+            const shippingValue = document.querySelector('.shipping-value');
+            const totalValue = document.querySelector('.total-value');
+
+            cartItems.innerHTML = '';
+            let subtotal = 0;
+
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+
+                cartItems.innerHTML += `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="item-details">
+                            <h4>${item.name}</h4>
+                            <p>Tamanho: ${item.size}</p>
+                            <p>Quantidade: ${item.quantity}</p>
+                            <p>R$ ${item.price.toFixed(2)}</p>
+                        </div>
+                        <button class="remove-item" onclick="removeFromCart(${index})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+            });
+
+            const shipping = subtotal > 0 ? 15 : 0;
+            const total = subtotal + shipping;
+
+            subtotalValue.textContent = `R$ ${subtotal.toFixed(2)}`;
+            shippingValue.textContent = `R$ ${shipping.toFixed(2)}`;
+            totalValue.textContent = `R$ ${total.toFixed(2)}`;
+        }
+
+        // Event Listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Botões de visualização do produto
+            document.querySelectorAll('.view-product').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const productCard = this.closest('.product-card');
+                    const productId = parseInt(productCard.dataset.productId);
+                    openProductModal(productId);
+                });
+            });
+
+            // Clique no card do produto
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.addEventListener('click', function(e) {
+                    if (!e.target.closest('.btn-action')) {
+                        const productId = parseInt(this.dataset.productId);
+                        openProductModal(productId);
+                    }
+                });
+            });
+
+            // Botões de fechar modal
+            document.querySelectorAll('.close-modal').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const overlay = this.closest('.product-overlay, .cart-overlay');
+                    if (overlay.classList.contains('cart-overlay')) {
+                        closeCart();
+                    } else {
+                        closeProductModal();
+                    }
+                });
+            });
+
+            // Fechar modal ao clicar fora
+            document.querySelectorAll('.product-overlay, .cart-overlay').forEach(overlay => {
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        if (this.classList.contains('cart-overlay')) {
+                            closeCart();
+                        } else {
+                            closeProductModal();
+                        }
+                    }
+                });
+            });
+
+            // Botão de adicionar ao carrinho
+            document.querySelector('.add-to-cart').addEventListener('click', function() {
+                const modal = document.querySelector('.product-modal');
+                const productId = parseInt(modal.dataset.productId);
+                const quantity = parseInt(modal.querySelector('.quantity-controls input').value);
+                const selectedSize = modal.querySelector('.size-btn.selected');
+                
+                if (!selectedSize) {
+                    alert('Por favor, selecione um tamanho');
+                    return;
+                }
+                
+                const size = selectedSize.textContent;
+                addToCart(productId, quantity, size);
+            });
+
+            // Controles de quantidade
+            document.querySelectorAll('.quantity-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const input = this.parentElement.querySelector('input');
+                    const currentValue = parseInt(input.value);
+                    
+                    if (this.classList.contains('minus') && currentValue > 1) {
+                        input.value = currentValue - 1;
+                    } else if (this.classList.contains('plus') && currentValue < 10) {
+                        input.value = currentValue + 1;
+                    }
+                });
+            });
+
+            // Seleção de tamanho
+            document.querySelectorAll('.size-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.parentElement.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+
+            // Abrir carrinho
+            document.querySelector('.cart-icon').addEventListener('click', function(e) {
+                e.preventDefault();
+                openCart();
+            });
+
+            // Botão continuar comprando
+            document.querySelector('.continue-shopping').addEventListener('click', closeCart);
+
+            // Botão finalizar compra
+            document.querySelector('.checkout').addEventListener('click', function() {
+                if (cart.length > 0) {
+                    alert('Compra finalizada com sucesso!');
+                    cart = [];
+                    updateCartCount();
+                    updateCartModal();
+                    closeCart();
+                } else {
+                    alert('Adicione itens ao carrinho para finalizar a compra.');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

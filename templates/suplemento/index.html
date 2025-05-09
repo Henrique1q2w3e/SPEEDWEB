@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedSuplementos - Suplementos de Alta Performance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header com Carrinho -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="https://via.placeholder.com/150x50" alt="SpeedSuplementos Logo">
+                </a>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero-banner">
+        <div class="container">
+            <div class="hero-content">
+                <h1>SUPLEMENTOS DE ALTA PERFORMANCE</h1>
+                <p>Transforme seus resultados com os melhores suplementos do mercado</p>
+                <button class="btn btn-primary">Conheça nossos suplementos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categorias de Produtos -->
+    <main class="container">
+        <!-- Whey Protein -->
+        <section class="product-category" id="whey">
+            <h2>Whey Protein</h2>
+            <div class="swiper whey-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Whey Gold Standard">
+                            <h3>Whey Gold Standard</h3>
+                            <p class="price">R$ 189,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="whey1">Ver mais</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Whey Isolado Probiótica">
+                            <h3>Whey Isolado Probiótica</h3>
+                            <p class="price">R$ 199,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="whey2">Ver mais</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Whey Max Titanium">
+                            <h3>Whey Max Titanium</h3>
+                            <p class="price">R$ 169,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="whey3">Ver mais</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Whey Isolado Growth">
+                            <h3>Whey Isolado Growth</h3>
+                            <p class="price">R$ 179,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="whey4">Ver mais</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Creatina -->
+        <section class="product-category" id="creatina">
+            <h2>Creatina</h2>
+            <div class="swiper creatina-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Creatina Growth">
+                            <h3>Creatina Monohidratada Growth</h3>
+                            <p class="price">R$ 89,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="creatina1">Ver mais</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Creatina HCL">
+                            <h3>Creatina HCL Max Titanium</h3>
+                            <p class="price">R$ 99,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="creatina2">Ver mais</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Creatina Creapure">
+                            <h3>Creatina Creapure Probiótica</h3>
+                            <p class="price">R$ 129,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="creatina3">Ver mais</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Hipercalórico -->
+        <section class="product-category" id="hipercalorico">
+            <h2>Hipercalórico</h2>
+            <div class="swiper mass-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Mass Titanium">
+                            <h3>Mass Titanium</h3>
+                            <p class="price">R$ 159,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="mass1">Ver mais</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Mass Probiótica">
+                            <h3>Mass Probiótica</h3>
+                            <p class="price">R$ 169,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="mass2">Ver mais</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Mass Growth">
+                            <h3>Mass Growth</h3>
+                            <p class="price">R$ 149,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="mass3">Ver mais</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Pré-treino -->
+        <section class="product-category" id="pretreino">
+            <h2>Pré-treino</h2>
+            <div class="swiper pre-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Pre-Workout Explosion">
+                            <h3>Pre-Workout Explosion</h3>
+                            <p class="price">R$ 129,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="pre1">Ver mais</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Pre-Workout Black Max">
+                            <h3>Pre-Workout Black Max</h3>
+                            <p class="price">R$ 139,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="pre2">Ver mais</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Pre-Workout Growth">
+                            <h3>Pre-Workout Growth</h3>
+                            <p class="price">R$ 119,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="pre3">Ver mais</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- Barras de Proteína -->
+        <section class="product-category" id="barras">
+            <h2>Barras de Proteína</h2>
+            <div class="swiper barras-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Protein Bar Growth">
+                            <h3>Protein Bar Growth</h3>
+                            <p class="price">R$ 12,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="barra1">Ver mais</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Protein Bar Max Titanium">
+                            <h3>Protein Bar Max Titanium</h3>
+                            <p class="price">R$ 14,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="barra2">Ver mais</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/200x200" alt="Protein Bar Probiótica">
+                            <h3>Protein Bar Probiótica</h3>
+                            <p class="price">R$ 13,90</p>
+                            <button class="btn btn-outline-primary view-product" data-product="barra3">Ver mais</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Sobre Nós</h4>
+                    <p>SpeedSuplementos é sua loja de confiança para suplementos de alta qualidade. Oferecemos os melhores produtos das principais marcas do mercado.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Links Úteis</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Trocas</a></li>
+                        <li><a href="#">Dúvidas Frequentes</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contato</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> (11) 99999-9999</li>
+                        <li><i class="fas fa-envelope"></i> contato@speedsuplementos.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo, SP</li>
+                    </ul>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SpeedSuplementos. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal do Produto -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Detalhes do Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="" alt="Produto" class="modal-product-image">
+                        </div>
+                        <div class="col-md-6">
+                            <h3 class="modal-product-name"></h3>
+                            <p class="modal-product-description"></p>
+                            <p class="modal-product-price"></p>
+                            <div class="flavor-selector">
+                                <label for="flavor">Sabor:</label>
+                                <select id="flavor" class="form-select">
+                                    <option value="">Selecione um sabor</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary add-to-cart">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrinho Lateral -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Items do carrinho serão adicionados aqui via JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">R$ 0,00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

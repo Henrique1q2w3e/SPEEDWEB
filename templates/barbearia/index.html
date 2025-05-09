@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Moderna - Template</title>
+    
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <h1>Barbearia Moderna</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#galeria">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#agendamento">Agendamento</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Barbearia Moderna</h1>
+            <p>Estilo e qualidade para seu visual</p>
+            <a href="#agendamento" class="btn btn-primary">Agende Agora</a>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="services">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-cut"></i>
+                        <h3>Corte de Cabelo</h3>
+                        <p>Corte moderno e personalizado</p>
+                        <span class="price">R$ 50,00</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-scissors"></i>
+                        <h3>Barba</h3>
+                        <p>Acabamento perfeito</p>
+                        <span class="price">R$ 30,00</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-spa"></i>
+                        <h3>Combo Completo</h3>
+                        <p>Corte + Barba + Hidratação</p>
+                        <span class="price">R$ 70,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Galeria de Trabalhos</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/templates/imagens/corte-barba.jpg" alt="Corte de Cabelo">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/templates/imagens/corte-cabelo.jpg" alt="Barba">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/templates/imagens/barbeiro.jpg" alt="Estilo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agendamento -->
+    <section id="agendamento" class="booking">
+        <div class="container">
+            <h2 class="section-title">Agende seu Horário</h2>
+            <div class="booking-form">
+                <form id="appointmentForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="service">Serviço</label>
+                                <select id="service" class="form-control" required>
+                                    <option value="">Selecione um serviço</option>
+                                    <option value="corte">Corte de Cabelo</option>
+                                    <option value="barba">Barba</option>
+                                    <option value="combo">Combo Completo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="date">Data</label>
+                                <div class="input-group">
+                                    <input type="text" id="date" class="form-control datepicker" placeholder="Selecione a data" required>
+                                    <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="time">Horário</label>
+                                <div class="time-slots">
+                                    <div class="row g-2">
+                                        <div class="col-4">
+                                            <input type="radio" class="btn-check" name="time" id="time1" value="09:00" required>
+                                            <label class="btn btn-outline-primary w-100" for="time1">09:00</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="radio" class="btn-check" name="time" id="time2" value="10:00">
+                                            <label class="btn btn-outline-primary w-100" for="time2">10:00</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="radio" class="btn-check" name="time" id="time3" value="11:00">
+                                            <label class="btn btn-outline-primary w-100" for="time3">11:00</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="radio" class="btn-check" name="time" id="time4" value="14:00">
+                                            <label class="btn btn-outline-primary w-100" for="time4">14:00</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="radio" class="btn-check" name="time" id="time5" value="15:00">
+                                            <label class="btn btn-outline-primary w-100" for="time5">15:00</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="radio" class="btn-check" name="time" id="time6" value="16:00">
+                                            <label class="btn btn-outline-primary w-100" for="time6">16:00</label>
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="radio" class="btn-check" name="time" id="time7" value="17:00">
+                                            <label class="btn btn-outline-primary w-100" for="time7">17:00</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="barber">Barbeiro</label>
+                                <select id="barber" class="form-control" required>
+                                    <option value="">Selecione um barbeiro</option>
+                                    <option value="joao">João Silva</option>
+                                    <option value="pedro">Pedro Santos</option>
+                                    <option value="marcos">Marcos Oliveira</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Confirmar Agendamento</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Rua Exemplo, 123 - Centro</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>contato@barbeariamoderna.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975844554717!2d-46.6521529!3d-23.5646162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzUyLjYiUyA0NsKwMzknMDcuNyJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Barbearia Moderna</h3>
+                    <p>Estilo e qualidade para seu visual</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Inicializa o calendário
+        flatpickr(".datepicker", {
+            locale: "pt",
+            dateFormat: "d/m/Y",
+            minDate: "today",
+            disableMobile: "true"
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit Academia - Transforme seu corpo, transforme sua vida</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">PowerFit</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#modalidades">Modalidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary ms-2" href="#matricula">Matricule-se</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center text-white">
+                    <h1 class="display-1 fw-bold" data-aos="fade-up">PowerFit Academia</h1>
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Transforme seu corpo, transforme sua vida</p>
+                    <a href="#matricula" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">Matricule-se agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title">Sobre a PowerFit</h2>
+                    <p class="lead">A melhor academia da região com mais de 10 anos de experiência.</p>
+                    <p>Nossa academia oferece um ambiente moderno e motivador, equipado com os melhores aparelhos do mercado. Contamos com uma equipe de profissionais altamente qualificados, prontos para ajudar você a alcançar seus objetivos.</p>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="feature-box">
+                                <i class="fas fa-dumbbell"></i>
+                                <h4>Equipamentos Modernos</h4>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="feature-box">
+                                <i class="fas fa-users"></i>
+                                <h4>Professores Qualificados</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48" alt="Academia" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modalidades Section -->
+    <section id="modalidades" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Nossas Modalidades</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="modalidade-card">
+                        <img src="https://images.unsplash.com/photo-1534367610401-9f5ed68180aa" alt="Musculação" class="img-fluid">
+                        <div class="modalidade-content">
+                            <h3>Musculação</h3>
+                            <p>Treinos personalizados para todos os níveis, do iniciante ao avançado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="modalidade-card">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a" alt="Funcional" class="img-fluid">
+                        <div class="modalidade-content">
+                            <h3>Funcional</h3>
+                            <p>Exercícios dinâmicos que trabalham todo o corpo de forma integrada.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="modalidade-card">
+                        <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c" alt="CrossFit" class="img-fluid">
+                        <div class="modalidade-content">
+                            <h3>CrossFit</h3>
+                            <p>Treinos de alta intensidade para melhorar força e condicionamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Depoimentos</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="depoimento-card">
+                        <div class="depoimento-img">
+                            <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Cliente">
+                        </div>
+                        <p class="depoimento-text">"Treino na PowerFit há 2 anos e os resultados são incríveis! Professores atenciosos e ambiente motivador."</p>
+                        <h4>Maria Silva</h4>
+                        <p class="depoimento-cargo">Aluna há 2 anos</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="depoimento-card">
+                        <div class="depoimento-img">
+                            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Cliente">
+                        </div>
+                        <p class="depoimento-text">"A melhor academia que já treinei! Equipamentos modernos e treinos personalizados."</p>
+                        <h4>João Santos</h4>
+                        <p class="depoimento-cargo">Aluno há 1 ano</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="depoimento-card">
+                        <div class="depoimento-img">
+                            <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Cliente">
+                        </div>
+                        <p class="depoimento-text">"Ambiente incrível e professores super atenciosos. Recomendo a todos!"</p>
+                        <h4>Ana Costa</h4>
+                        <p class="depoimento-cargo">Aluna há 6 meses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estatísticas Section -->
+    <section id="estatisticas" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Nossos Números</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="stat-card text-center">
+                        <i class="fas fa-users fa-3x mb-3"></i>
+                        <h3 class="counter" data-target="2500">0</h3>
+                        <p>Alunos Ativos</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-card text-center">
+                        <i class="fas fa-trophy fa-3x mb-3"></i>
+                        <h3 class="counter" data-target="15">0</h3>
+                        <p>Anos de Experiência</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-card text-center">
+                        <i class="fas fa-star fa-3x mb-3"></i>
+                        <h3 class="counter" data-target="98">0</h3>
+                        <p>Satisfação dos Alunos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="graph-container" data-aos="fade-up">
+                        <canvas id="alunosChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos Section -->
+    <section id="planos" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Nossos Planos</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="plano-card">
+                        <div class="plano-header">
+                            <h3>Básico</h3>
+                            <div class="preco">
+                                <span class="valor">R$ 99</span>
+                                <span class="periodo">/mês</span>
+                            </div>
+                        </div>
+                        <ul class="plano-features">
+                            <li><i class="fas fa-check"></i> Acesso à musculação</li>
+                            <li><i class="fas fa-check"></i> Avaliação física</li>
+                            <li><i class="fas fa-check"></i> Horário limitado</li>
+                        </ul>
+                        <a href="#matricula" class="btn btn-outline-primary w-100">Escolher plano</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="plano-card destaque">
+                        <div class="plano-header">
+                            <h3>Premium</h3>
+                            <div class="preco">
+                                <span class="valor">R$ 149</span>
+                                <span class="periodo">/mês</span>
+                            </div>
+                        </div>
+                        <ul class="plano-features">
+                            <li><i class="fas fa-check"></i> Acesso a todas as modalidades</li>
+                            <li><i class="fas fa-check"></i> Avaliação física mensal</li>
+                            <li><i class="fas fa-check"></i> Horário ilimitado</li>
+                            <li><i class="fas fa-check"></i> Acompanhamento personalizado</li>
+                        </ul>
+                        <a href="#matricula" class="btn btn-primary w-100">Escolher plano</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="plano-card">
+                        <div class="plano-header">
+                            <h3>Família</h3>
+                            <div class="preco">
+                                <span class="valor">R$ 299</span>
+                                <span class="periodo">/mês</span>
+                            </div>
+                        </div>
+                        <ul class="plano-features">
+                            <li><i class="fas fa-check"></i> Até 3 pessoas</li>
+                            <li><i class="fas fa-check"></i> Acesso a todas as modalidades</li>
+                            <li><i class="fas fa-check"></i> Avaliação física para todos</li>
+                            <li><i class="fas fa-check"></i> Horário ilimitado</li>
+                        </ul>
+                        <a href="#matricula" class="btn btn-outline-primary w-100">Escolher plano</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Matrícula Section -->
+    <section id="matricula" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="matricula-card" data-aos="fade-up">
+                        <h2 class="text-center mb-4">Matricule-se Agora</h2>
+                        <form id="matriculaForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nome">Nome Completo</label>
+                                        <input type="text" class="form-control" id="nome" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">E-mail</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="telefone">Telefone</label>
+                                        <input type="tel" class="form-control" id="telefone" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="modalidade">Modalidade Desejada</label>
+                                        <select class="form-select" id="modalidade" required>
+                                            <option value="">Selecione...</option>
+                                            <option value="musculacao">Musculação</option>
+                                            <option value="funcional">Funcional</option>
+                                            <option value="crossfit">CrossFit</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="horario">Melhor Horário para Treinar</label>
+                                        <select class="form-select" id="horario" required>
+                                            <option value="">Selecione...</option>
+                                            <option value="manha">Manhã (6h - 12h)</option>
+                                            <option value="tarde">Tarde (12h - 18h)</option>
+                                            <option value="noite">Noite (18h - 22h)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">Enviar Matrícula</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>PowerFit Academia</h4>
+                    <p>Transformando vidas através do fitness</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contato</h4>
+                    <p>
+                        <i class="fas fa-phone"></i> (11) 9999-9999<br>
+                        <i class="fas fa-envelope"></i> contato@powerfit.com.br<br>
+                        <i class="fas fa-map-marker-alt"></i> Rua da Academia, 123
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
