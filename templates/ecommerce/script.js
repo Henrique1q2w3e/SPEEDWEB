@@ -248,3 +248,87 @@ newsletterForm.addEventListener('submit', (e) => {
 // Inicialização
 updateCartCount();
 updateCartItems();
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Newsletter form submission
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            // Here you would typically send this to your backend
+            alert('Obrigado por se inscrever! Você receberá nossas novidades em breve.');
+            this.reset();
+        });
+    }
+
+    // Gallery image hover effect
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.querySelector('img').style.transform = 'scale(1.05)';
+        });
+        item.addEventListener('mouseleave', function() {
+            this.querySelector('img').style.transform = 'scale(1)';
+        });
+    });
+
+    // Directions button functionality
+    const directionsBtn = document.querySelector('.directions-btn');
+    if (directionsBtn) {
+        directionsBtn.addEventListener('click', function() {
+            // Replace with your actual address
+            const address = 'Rua Exemplo, 123 - Centro';
+            const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+            window.open(mapsUrl, '_blank');
+        });
+    }
+
+    // Mobile navigation toggle (you can add a mobile menu button in the HTML if needed)
+    function handleMobileNav() {
+        const navLinks = document.querySelector('.nav-links');
+        if (window.innerWidth <= 768) {
+            // Add mobile menu functionality here if needed
+        }
+    }
+
+    // Handle window resize
+    window.addEventListener('resize', handleMobileNav);
+    handleMobileNav();
+
+    // Add animation on scroll
+    const animateOnScroll = function() {
+        const elements = document.querySelectorAll('.menu-item, .feature, .gallery-item');
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementBottom = element.getBoundingClientRect().bottom;
+            
+            if (elementTop < window.innerHeight && elementBottom > 0) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    };
+
+    // Set initial styles for animation
+    document.querySelectorAll('.menu-item, .feature, .gallery-item').forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+
+    // Add scroll event listener
+    window.addEventListener('scroll', animateOnScroll);
+    // Initial check for elements in view
+    animateOnScroll();
+});

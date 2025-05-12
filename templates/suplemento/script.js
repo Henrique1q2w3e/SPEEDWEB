@@ -4,53 +4,76 @@ const products = {
     whey1: {
         name: 'Whey Gold Standard',
         price: 189.90,
-        image: 'https://via.placeholder.com/400x400',
+        image: '/templates/imagens/gold-chocolate.jpg',
         description: 'Whey Protein de alta qualidade, com 24g de proteína por dose. Ideal para ganho de massa muscular e recuperação pós-treino.',
-        flavors: ['Chocolate', 'Baunilha', 'Morango', 'Cookies & Cream']
+        flavors: {
+            'baunilha': '/templates/imagens/gold-baunilha.webp',
+            'chocolate': '/templates/imagens/gold-chocolate.jpg',
+            'morango': '/templates/imagens/gold-morango.webp'
+        }
     },
     whey2: {
         name: 'Whey Isolado Probiótica',
         price: 199.90,
-        image: 'https://via.placeholder.com/400x400',
+        image: '/templates/imagens/probi-isolado.png',
         description: 'Whey Isolado com 27g de proteína por dose. Baixo teor de lactose e gordura.',
-        flavors: ['Chocolate', 'Baunilha', 'Morango', 'Doce de Leite']
+        flavors: {
+            'baunilha': '/templates/imagens/iso-pro-baulinha.png',
+            'chocolate': '/templates/imagens/iso-pro-chocolate.webp',
+            'morango': '/templates/imagens/iso-pro-morango.webp'
+        }
     },
     whey3: {
         name: 'Whey Max Titanium',
         price: 169.90,
-        image: 'https://via.placeholder.com/400x400',
+        image: '/templates/imagens/max.webp',
         description: 'Whey Protein com 23g de proteína por dose. Excelente custo-benefício.',
-        flavors: ['Chocolate', 'Baunilha', 'Morango', 'Cookies & Cream', 'Chocolate Branco']
+        flavors: {
+            'baunilha': '/templates/imagens/max-baunilha.webp',
+            'chocolate': '/templates/imagens/max-chocolate.webp',
+            'morango': '/templates/imagens/max-morango.webp'
+        }
     },
     whey4: {
         name: 'Whey Isolado Growth',
         price: 179.90,
-        image: 'https://via.placeholder.com/400x400',
+        image: '/templates/imagens/iso-gro.avif',
         description: 'Whey Isolado premium com 26g de proteína por dose. Alta absorção.',
-        flavors: ['Chocolate', 'Baunilha', 'Morango', 'Chocolate Branco', 'Cookies & Cream']
+        flavors: {
+            'baunilha': '/templates/imagens/grow-baunilha.webp',
+            'chocolate': '/templates/imagens/grow-chocolate.webp',
+            'morango': '/templates/imagens/grow-morango.jpg'
+        }
     },
 
     // Creatinas
     creatina1: {
         name: 'Creatina Monohidratada Growth',
         price: 89.90,
-        image: 'https://via.placeholder.com/400x400',
+        image: '/templates/imagens/creatina-grow.jpg',
         description: 'Creatina monohidratada pura, 300g. Aumenta a força e o volume muscular.',
-        flavors: ['Sem sabor']
+        hasFlavors: false
     },
     creatina2: {
         name: 'Creatina HCL Max Titanium',
         price: 99.90,
-        image: 'https://via.placeholder.com/400x400',
+        image: '/templates/imagens/creatina-max.jpg',
         description: 'Creatina HCL com melhor absorção. 120 cápsulas.',
-        flavors: ['Sem sabor']
+        hasFlavors: false
     },
     creatina3: {
         name: 'Creatina Creapure Probiótica',
         price: 129.90,
-        image: 'https://via.placeholder.com/400x400',
+        image: '/templates/imagens/creatina-probiotica.jpg',
         description: 'Creatina Creapure alemã, 300g. Máxima pureza e eficácia.',
-        flavors: ['Sem sabor']
+        hasFlavors: false
+    },
+    creatina4: {
+        name: 'Creatina intregral',
+        price: 129.90,
+        image: '/templates/imagens/creatina-integral.webp',
+        description: 'Creatina intregral, 300g. Máxima pureza e eficácia.',
+        hasFlavors: false
     },
 
     // Hipercalóricos
@@ -59,45 +82,76 @@ const products = {
         price: 159.90,
         image: 'https://via.placeholder.com/400x400',
         description: 'Hipercalórico premium com 50g de proteína por dose. Ideal para ganho de peso e massa muscular.',
-        flavors: ['Chocolate', 'Baunilha', 'Morango']
+        flavors: {
+            'baunilha': '/templates/imagens/mass-probiotica-baulinha.webp',
+            'chocolate': '/templates/imagens/mass-probiotica-chocolate.webp',
+            'morango': '/templates/imagens/mass-probiotica-morango.webp'
+        }
     },
     mass2: {
         name: 'Mass Probiótica',
         price: 169.90,
         image: 'https://via.placeholder.com/400x400',
         description: 'Hipercalórico com 55g de proteína por dose. Rico em carboidratos complexos.',
-        flavors: ['Chocolate', 'Baunilha', 'Morango', 'Doce de Leite']
+        flavors: {
+            'baunilha': '/templates/imagens/mass-probiotica-baulinha.webp',
+            'chocolate': '/templates/imagens/mass-probiotica-chocolate.webp',
+            'morango': '/templates/imagens/mass-probiotica-morango.webp'
+        }
     },
     mass3: {
         name: 'Mass Growth',
         price: 149.90,
         image: 'https://via.placeholder.com/400x400',
         description: 'Hipercalórico com 48g de proteína por dose. Excelente custo-benefício.',
-        flavors: ['Chocolate', 'Baunilha', 'Morango', 'Chocolate Branco']
+        flavors: {
+            'baunilha': '/templates/imagens/mass-grow-baunilha.webp',
+            'chocolate': '  /templates/imagens/mass-grow-chocolate.jpg',
+            'morango': '/templates/imagens/mass-grow-morango.webp'
+        }
+    },
+    mass4: {
+        name: 'Mass Growth',
+        price: 149.90,
+        image: 'https://via.placeholder.com/400x400',
+        description: 'Hipercalórico com 48g de proteína por dose. Excelente custo-benefício.',
+        flavors: {
+            'baunilha': '/templates/imagens/mass-integral-baunilha.webp',
+            'chocolate': '  /templates/imagens/mass-integral-chocolate.webp',
+            'morango': '/templates/imagens/mass-integral-morango.webp'
+        }
     },
 
     // Pré-treinos
     pre1: {
-        name: 'Pre-Workout Explosion',
+        name: 'Pre-Workout intregral',
         price: 129.90,
-        image: 'https://via.placeholder.com/400x400',
+        image: '/templates/imagens/pre-integral.jpg',
         description: 'Pré-treino com cafeína, beta-alanina e creatina. Aumenta a energia e o foco durante o treino.',
-        flavors: ['Frutas Vermelhas', 'Laranja', 'Limão']
+        hasFlavors: false
     },
     pre2: {
         name: 'Pre-Workout Black Max',
         price: 139.90,
-        image: 'https://via.placeholder.com/400x400',
+        image: '/templates/imagens/pre-max.jpg',
         description: 'Pré-treino com alta concentração de cafeína e beta-alanina. Máximo foco e energia.',
-        flavors: ['Frutas Vermelhas', 'Laranja', 'Limão', 'Tutti-Frutti']
+        hasFlavors: false
     },
-    pre3: {
-        name: 'Pre-Workout Growth',
-        price: 119.90,
-        image: 'https://via.placeholder.com/400x400',
+        pre3: {
+            name: 'Pre-Workout Growth',
+            price: 119.90,
+            image: '/templates/imagens/pre-grow.webp',
+            description: 'Pré-treino com fórmula balanceada. Ideal para iniciantes e intermediários.',
+            hasFlavors: false
+        },
+    pre4: {
+        name: 'Pre-Workout Bope',
+        price: 90.90,
+        image: '/templates/imagens/pre-bope.webp',
         description: 'Pré-treino com fórmula balanceada. Ideal para iniciantes e intermediários.',
-        flavors: ['Frutas Vermelhas', 'Laranja', 'Limão', 'Uva']
+        hasFlavors: false
     },
+        
 
     // Barras de Proteína
     barra1: {
@@ -105,21 +159,33 @@ const products = {
         price: 12.90,
         image: 'https://via.placeholder.com/400x400',
         description: 'Barra de proteína com 20g de proteína. Snack perfeito para qualquer hora do dia.',
-        flavors: ['Chocolate', 'Caramelo', 'Cookies & Cream']
+        flavors: {
+            'chocolate': '/templates/imagens/barra-growth-chocolate.webp',
+            'caramelo': '/templates/imagens/barra-growth-caramelo.webp',
+            'cookies': '/templates/imagens/barra-growth-cookies.webp'
+        }
     },
     barra2: {
         name: 'Protein Bar Max Titanium',
         price: 14.90,
         image: 'https://via.placeholder.com/400x400',
         description: 'Barra de proteína premium com 22g de proteína. Baixo teor de açúcar.',
-        flavors: ['Chocolate', 'Caramelo', 'Cookies & Cream', 'Chocolate Branco']
+        flavors: {
+            'chocolate': '/templates/imagens/barra-max-chocolate.webp',
+            'caramelo': '/templates/imagens/barra-max-caramelo.webp',
+            'cookies': '/templates/imagens/barra-max-cookies.webp'
+        }
     },
     barra3: {
         name: 'Protein Bar Probiótica',
         price: 13.90,
         image: 'https://via.placeholder.com/400x400',
         description: 'Barra de proteína com 21g de proteína. Rico em fibras e proteínas.',
-        flavors: ['Chocolate', 'Caramelo', 'Cookies & Cream', 'Doce de Leite']
+        flavors: {
+            'chocolate': '/templates/imagens/barra-pro-chocolate.webp',
+            'caramelo': '/templates/imagens/barra-pro-caramelo.webp',
+            'cookies': '/templates/imagens/barra-pro-cookies.webp'
+        }
     }
 };
 
@@ -215,7 +281,7 @@ function openProductModal(productId) {
     const flavorSelect = modal.querySelector('#flavor');
     flavorSelect.innerHTML = `
         <option value="">Selecione um sabor</option>
-        ${product.flavors.map(flavor => `
+        ${Object.keys(product.flavors).map(flavor => `
             <option value="${flavor}">${flavor}</option>
         `).join('')}
     `;
@@ -305,4 +371,146 @@ document.addEventListener('DOMContentLoaded', () => {
     // Scroll animation
     window.addEventListener('scroll', handleScrollAnimation);
     handleScrollAnimation(); // Inicial check
+});
+
+// Product Modal and Flavor Selection
+document.addEventListener('DOMContentLoaded', function() {
+    const productModal = new bootstrap.Modal(document.getElementById('productModal'));
+    const productImage = document.getElementById('productImage');
+    const productName = document.getElementById('productName');
+    const productPrice = document.getElementById('productPrice');
+    const flavorButtons = document.querySelectorAll('.flavor-btn');
+    const quantityInput = document.getElementById('quantity');
+    const decreaseQuantityBtn = document.getElementById('decreaseQuantity');
+    const increaseQuantityBtn = document.getElementById('increaseQuantity');
+    let currentProductId = null;
+
+    // Handle product card clicks
+    document.querySelectorAll('.view-product').forEach(button => {
+        button.addEventListener('click', function() {
+            const productId = this.dataset.product;
+            const product = products[productId];
+            if (!product) return;
+
+            currentProductId = productId;
+            const productCard = this.closest('.product-card');
+            const name = productCard.querySelector('h3').textContent;
+            const price = productCard.querySelector('.price').textContent;
+
+            // Update modal content
+            productName.textContent = name;
+            productPrice.textContent = price;
+
+            // Show/hide flavor selector based on product type
+            const flavorSelector = document.querySelector('.flavor-selector');
+            if (product.hasFlavors === false) {
+                flavorSelector.style.display = 'none';
+                productImage.src = product.image;
+            } else {
+                flavorSelector.style.display = 'block';
+                // Update flavor buttons with product-specific images
+                flavorButtons.forEach(btn => {
+                    const flavor = btn.dataset.flavor;
+                    if (product.flavors[flavor]) {
+                        btn.dataset.image = product.flavors[flavor];
+                    }
+                });
+
+                // Set initial image
+                const initialFlavor = flavorButtons[0].dataset.flavor;
+                productImage.src = product.flavors[initialFlavor] || product.image;
+
+                // Reset flavor selection
+                flavorButtons.forEach(btn => btn.classList.remove('active'));
+                flavorButtons[0].classList.add('active');
+            }
+
+            // Reset quantity
+            quantityInput.value = 1;
+
+            // Show modal
+            productModal.show();
+        });
+    });
+
+    // Handle flavor selection
+    flavorButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            flavorButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Update product image
+            const newImage = this.dataset.image;
+            productImage.src = newImage;
+        });
+    });
+
+    // Handle quantity controls
+    decreaseQuantityBtn.addEventListener('click', () => {
+        const currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+    });
+
+    increaseQuantityBtn.addEventListener('click', () => {
+        const currentValue = parseInt(quantityInput.value);
+        if (currentValue < 10) {
+            quantityInput.value = currentValue + 1;
+        }
+    });
+
+    // Handle quantity input validation
+    quantityInput.addEventListener('change', () => {
+        let value = parseInt(quantityInput.value);
+        if (isNaN(value) || value < 1) {
+            quantityInput.value = 1;
+        } else if (value > 10) {
+            quantityInput.value = 10;
+        }
+    });
+
+    // Handle add to cart
+    document.querySelector('.add-to-cart').addEventListener('click', function() {
+        if (!currentProductId) return;
+
+        const product = products[currentProductId];
+        const selectedFlavor = document.querySelector('.flavor-btn.active').dataset.flavor;
+        const quantity = parseInt(quantityInput.value);
+
+        // Add to cart
+        const cartItem = {
+            id: currentProductId,
+            name: product.name,
+            price: product.price,
+            image: productImage.src,
+            flavor: selectedFlavor,
+            quantity: quantity
+        };
+
+        // Check if item already exists in cart
+        const existingItemIndex = cart.findIndex(item => 
+            item.id === cartItem.id && item.flavor === cartItem.flavor
+        );
+
+        if (existingItemIndex !== -1) {
+            cart[existingItemIndex].quantity += quantity;
+        } else {
+            cart.push(cartItem);
+        }
+
+        // Update cart UI
+        updateCartCount();
+        updateCartTotal();
+        renderCartItems();
+
+        // Show success message
+        alert('Produto adicionado ao carrinho!');
+        
+        // Close modal
+        productModal.hide();
+    });
 });

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEMANICO - Streetwear Urbano</title>
+    <title>Gourmet Café - Experiência Única</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -11,124 +11,147 @@
 <body>
     <header>
         <nav>
-            <div class="logo">DEMANICO</div>
-            <div class="cart-icon" id="cartIcon">
-                🛒 <span id="cartCount">0</span>
+            <div class="logo">Gourmet</div>
+            <div class="nav-links">
+                <a href="#menu">Cardápio</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#localizacao">Localização</a>
             </div>
         </nav>
         <div class="banner">
-            <h1>SEJA BRUTO.<br>SEJA DEMANICO.</h1>
+            <h1>
+                CAFÉS ESPECIAIS<br>
+                <span>E MOMENTOS INESQUECÍVEIS</span>
+            </h1>
         </div>
     </header>
 
     <main>
-        <section class="category" id="camisetas">
-            <h2>Camisetas</h2>
-            <div class="carousel">
-                <button class="carousel-button prev">❮</button>
-                <div class="carousel-container">
-                    <div class="product-card" data-id="1">
-                        <img src="https://via.placeholder.com/300x400" alt="Camiseta 1">
-                        <h3>Camiseta Oversized</h3>
-                        <p class="price">R$ 129,90</p>
-                        <div class="view-icon"><i class="fas fa-eye"></i></div>
-                    </div>
-                    <div class="product-card" data-id="2">
-                        <img src="https://via.placeholder.com/300x400" alt="Camiseta 2">
-                        <h3>Camiseta Graphic</h3>
-                        <p class="price">R$ 149,90</p>
-                        <div class="view-icon"><i class="fas fa-eye"></i></div>
+        <section class="category" id="menu">
+            <h2>Nosso Cardápio</h2>
+            <div class="menu-container">
+                <div class="menu-category">
+                    <h3>Cafés Especiais</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="/templates/imagens/cafe-expresso.png" alt="Espresso Clássico">
+                            <h4>Espresso Clássico</h4>
+                            <p class="description">Café puro e intenso, perfeito para começar o dia. Preparado com grãos selecionados e torra artesanal.</p>
+                            <p class="price">R$ 8,90</p>
+                        </div>
+                        <div class="menu-item">
+                            <img src="/templates/imagens/cappuccino.jpg" alt="Cappuccino">
+                            <h4>Cappuccino Cremoso</h4>
+                            <p class="description">Espresso com leite vaporizado e espuma suave. Acompanha canela ou chocolate em pó.</p>
+                            <p class="price">R$ 12,90</p>
+                        </div>
+                        <div class="menu-item">
+                            <img src="/templates/imagens/cafe-gelado.jpg" alt="Café Gelado">
+                            <h4>Café Gelado</h4>
+                            <p class="description">Espresso gelado com leite e calda de caramelo. Perfeito para dias quentes.</p>
+                            <p class="price">R$ 14,90</p>
+                        </div>
+                        <div class="menu-item">
+                            <img src="/templates/imagens/cafe-com-leite.jpg" alt="Café com Leite">
+                            <h4>Café com Leite</h4>
+                            <p class="description">Espresso com leite vaporizado e espuma suave. Acompanha canela ou chocolate em pó.</p>
+                            <p class="price">R$ 24,90</p>
+                        </div>
                     </div>
                 </div>
-                <button class="carousel-button next">❯</button>
+
+                <div class="menu-category">
+                    <h3>Doces & Sobremesas</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <img src="/templates/imagens/frutas-vermelhas.jpg" alt="Cheesecake">
+                            <h4>Cheesecake de Frutas Vermelhas</h4>
+                            <p class="description">Sobremesa cremosa com calda de frutas vermelhas. Base de biscoito e cream cheese.</p>
+                            <p class="price">R$ 18,90</p>
+                        </div>
+                        <div class="menu-item">
+                            <img src="/templates/imagens/croissant-chocolate.jpg" alt="Croissant">
+                            <h4>Croissant de Chocolate</h4>
+                            <p class="description">Croissant folhado com chocolate belga. Quentinho e crocante.</p>
+                            <p class="price">R$ 14,90</p>
+                        </div>
+                        <div class="menu-item">
+                            <img src="/templates/imagens/tiramissu.jpg" alt="Tiramisu">
+                            <h4>Tiramisu</h4>
+                            <p class="description">Sobremesa italiana com café, mascarpone e cacau. Clássico irresistível.</p>
+                            <p class="price">R$ 16,90</p>
+                        </div>
+                        <div class="menu-item">
+                            <img src="/templates/imagens/cupcake.jpg"  alt="cupcake">
+                            <h4>Cupcake</h4>
+                            <p class="description">Sobremesa com café, Cupcake com chocolate. Clássico irresistível.</p>
+                            <p class="price">R$ 26,90</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="category" id="calcas">
-            <h2>Calças</h2>
-            <div class="carousel">
-                <button class="carousel-button prev">❮</button>
-                <div class="carousel-container">
-                    <div class="product-card" data-id="3">
-                        <img src="https://via.placeholder.com/300x400" alt="Calça 1">
-                        <h3>Calça Cargo</h3>
-                        <p class="price">R$ 249,90</p>
-                        <div class="view-icon"><i class="fas fa-eye"></i></div>
-                    </div>
-                    <div class="product-card" data-id="4">
-                        <img src="https://via.placeholder.com/300x400" alt="Calça 2">
-                        <h3>Calça Jogger</h3>
-                        <p class="price">R$ 199,90</p>
-                        <div class="view-icon"><i class="fas fa-eye"></i></div>
+        <section class="category" id="sobre">
+            <h2>Sobre o Gourmet</h2>
+            <div class="about-container">
+                <div class="about-content">
+                    <p>O Gourmet Café nasceu da paixão por café e momentos especiais. Nossa missão é proporcionar uma experiência única, combinando os melhores grãos de café com um ambiente acolhedor e aconchegante.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-coffee"></i>
+                            <h4>Cafés Especiais</h4>
+                            <p>Grãos selecionados e torra artesanal</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <h4>Ambiente Acolhedor</h4>
+                            <p>Espaço perfeito para trabalho e encontros</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-camera"></i>
+                            <h4>Instagramável</h4>
+                            <p>Cantos perfeitos para suas fotos</p>
+                        </div>
                     </div>
                 </div>
-                <button class="carousel-button next">❯</button>
             </div>
         </section>
 
-        <section class="category" id="shorts">
-            <h2>Shorts</h2>
-            <div class="carousel">
-                <button class="carousel-button prev">❮</button>
-                <div class="carousel-container">
-                    <div class="product-card" data-id="5">
-                        <img src="https://via.placeholder.com/300x400" alt="Short 1">
-                        <h3>Short Cargo</h3>
-                        <p class="price">R$ 159,90</p>
-                        <div class="view-icon"><i class="fas fa-eye"></i></div>
-                    </div>
-                    <div class="product-card" data-id="6">
-                        <img src="https://via.placeholder.com/300x400" alt="Short 2">
-                        <h3>Short Tactical</h3>
-                        <p class="price">R$ 179,90</p>
-                        <div class="view-icon"><i class="fas fa-eye"></i></div>
-                    </div>
+        <section class="category" id="galeria">
+            <h2>Nossa Galeria</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="/templates/imagens/interno-cafeteria.jpg" alt="Espaço Interno">
+                    <p>Nosso ambiente interno</p>
                 </div>
-                <button class="carousel-button next">❯</button>
+                <div class="gallery-item">
+                    <img src="/templates/imagens/cafes-especiais.jpg" alt="Cafés Especiais">
+                    <p>Nossos cafés especiais</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="/templates/imagens/sobremesa.jpg" alt="Doces">
+                    <p>Nossas sobremesas</p>
+                </div>
             </div>
         </section>
 
-        <section class="category" id="moletons">
-            <h2>Moletons</h2>
-            <div class="carousel">
-                <button class="carousel-button prev">❮</button>
-                <div class="carousel-container">
-                    <div class="product-card" data-id="7">
-                        <img src="https://via.placeholder.com/300x400" alt="Moletom 1">
-                        <h3>Moletom Oversized</h3>
-                        <p class="price">R$ 299,90</p>
-                        <div class="view-icon"><i class="fas fa-eye"></i></div>
-                    </div>
-                    <div class="product-card" data-id="8">
-                        <img src="https://via.placeholder.com/300x400" alt="Moletom 2">
-                        <h3>Moletom Graphic</h3>
-                        <p class="price">R$ 329,90</p>
-                        <div class="view-icon"><i class="fas fa-eye"></i></div>
+        <section class="category" id="localizacao">
+            <h2>Localização</h2>
+            <div class="location-container">
+                <div class="col-md-6">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975844554717!2d-46.6521529!3d-23.5646162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzUyLjYiUyA0NsKwMzknMDcuNyJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
-                <button class="carousel-button next">❯</button>
-            </div>
-        </section>
-
-        <section class="category" id="tenis">
-            <h2>Tênis</h2>
-            <div class="carousel">
-                <button class="carousel-button prev">❮</button>
-                <div class="carousel-container">
-                    <div class="product-card" data-id="9">
-                        <img src="https://via.placeholder.com/300x400" alt="Tênis 1">
-                        <h3>Tênis Urban</h3>
-                        <p class="price">R$ 399,90</p>
-                        <div class="view-icon"><i class="fas fa-eye"></i></div>
-                    </div>
-                    <div class="product-card" data-id="10">
-                        <img src="https://via.placeholder.com/300x400" alt="Tênis 2">
-                        <h3>Tênis Street</h3>
-                        <p class="price">R$ 449,90</p>
-                        <div class="view-icon"><i class="fas fa-eye"></i></div>
-                    </div>
+                <div class="location-info">
+                    <h3>Venha nos Visitar</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 - Centro</p>
+                    <p><i class="fas fa-clock"></i> Seg-Sex: 8h às 20h | Sáb-Dom: 9h às 18h</p>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                    <button class="directions-btn">Como Chegar</button>
                 </div>
-                <button class="carousel-button next">❯</button>
             </div>
         </section>
     </main>
@@ -136,12 +159,12 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>DEMANICO</h3>
-                <p>Estilo urbano, brutal e elegante para quem não tem medo de se expressar.</p>
+                <h3>Gourmet</h3>
+                <p>Onde cada xícara conta uma história.</p>
             </div>
             <div class="footer-section">
                 <h3>Newsletter</h3>
-                <p>Receba novidades e ofertas exclusivas</p>
+                <p>Receba novidades e promoções especiais</p>
                 <form class="newsletter-form" id="newsletterForm">
                     <input type="email" placeholder="Seu melhor e-mail" required>
                     <button type="submit">Inscrever</button>
@@ -149,7 +172,7 @@
             </div>
             <div class="footer-section">
                 <h3>Contato</h3>
-                <p>Email: contato@demanico.com</p>
+                <p>Email: contato@Gourmet.com</p>
                 <p>WhatsApp: (11) 99999-9999</p>
             </div>
             <div class="footer-section">
@@ -162,40 +185,9 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 DEMANICO. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Gourmet. Todos os direitos reservados.</p>
         </div>
     </footer>
-
-    <!-- Modal do Produto -->
-    <div class="product-modal" id="productModal">
-        <div class="modal-content">
-            <button class="close-modal">&times;</button>
-            <div class="modal-product-details">
-                <img src="" alt="" id="modalProductImage">
-                <div class="product-info">
-                    <h2 id="modalProductName"></h2>
-                    <p id="modalProductDescription"></p>
-                    <p class="price" id="modalProductPrice"></p>
-                    <button class="add-to-cart-btn" id="addToCartBtn">Adicionar ao Carrinho</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal do Carrinho -->
-    <div class="cart-modal" id="cartModal">
-        <div class="cart-content">
-            <button class="close-cart">&times;</button>
-            <h2>Seu Carrinho</h2>
-            <div class="cart-items" id="cartItems">
-                <!-- Items do carrinho serão inseridos aqui via JavaScript -->
-            </div>
-            <div class="cart-total">
-                <p>Total: <span id="cartTotal">R$ 0,00</span></p>
-                <button class="checkout-btn">Finalizar Compra</button>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
