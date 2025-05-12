@@ -57,7 +57,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('/templates/imagens/barbearia.jpg')  center/cover;
+                url('../imagens/barbearia.jpg')  center/cover;
     display: flex;
     align-items: center;
     text-align: center;

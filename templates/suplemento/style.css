@@ -54,7 +54,7 @@ body {
 .hero-banner {
     height: 80vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('/templates/imagens/banner-loja-de-suplemento.jpg');
+                url('../imagens/banner-loja-de-suplemento.jpg');
     background-size: cover;
     background-position: center;
     display: flex;

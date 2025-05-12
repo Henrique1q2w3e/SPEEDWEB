@@ -41,7 +41,7 @@ body {
 /* Hero Section */
 .hero-section {
     height: 100vh;
-    background: url('/templates/imagens/bannar-academia.jpg') center/cover no-repeat;
+    background: url('../imagens/bannar-academia.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;

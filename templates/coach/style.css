@@ -70,7 +70,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('/templates/imagens/banner-coach.jpg');
+                url('../imagens/banner-coach.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -82,7 +82,7 @@ body {
 
 .hero.masculino-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('/templates/imagens/homem-treinando.jpg');
+                url('../imagens/homem-treinando.jpg');
 }
 
 .hero.feminino-hero {
@@ -344,7 +344,7 @@ body {
 .professor-hero {
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-                url('/templates/imagens/professor.jpg');
+                url('../imagens/professor.jpg');
     background-size: cover;
     background-position: center;
     display: flex;

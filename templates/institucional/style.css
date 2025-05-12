@@ -84,7 +84,7 @@ header {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/templates/imagens/semente.jpg');
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../imagens/semente.jpg');
     background-size: cover;
     background-position: center;
     display: flex;

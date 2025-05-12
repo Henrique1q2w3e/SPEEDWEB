@@ -4,45 +4,45 @@ const products = {
     whey1: {
         name: 'Whey Gold Standard',
         price: 189.90,
-        image: '/templates/imagens/gold-chocolate.jpg',
+        image: '../imagens/gold-chocolate.jpg',
         description: 'Whey Protein de alta qualidade, com 24g de proteína por dose. Ideal para ganho de massa muscular e recuperação pós-treino.',
         flavors: {
-            'baunilha': '/templates/imagens/gold-baunilha.webp',
-            'chocolate': '/templates/imagens/gold-chocolate.jpg',
-            'morango': '/templates/imagens/gold-morango.webp'
+            'baunilha': '../imagens/gold-baunilha.webp',
+            'chocolate': '../imagens/gold-chocolate.jpg',
+            'morango': '../imagens/gold-morango.webp'
         }
     },
     whey2: {
         name: 'Whey Isolado Probiótica',
         price: 199.90,
-        image: '/templates/imagens/probi-isolado.png',
+        image: '../imagens/probi-isolado.png',
         description: 'Whey Isolado com 27g de proteína por dose. Baixo teor de lactose e gordura.',
         flavors: {
-            'baunilha': '/templates/imagens/iso-pro-baulinha.png',
-            'chocolate': '/templates/imagens/iso-pro-chocolate.webp',
-            'morango': '/templates/imagens/iso-pro-morango.webp'
+            'baunilha': '../imagens/iso-pro-baulinha.png',
+            'chocolate': '../imagens/iso-pro-chocolate.webp',
+            'morango': '../imagens/iso-pro-morango.webp'
         }
     },
     whey3: {
         name: 'Whey Max Titanium',
         price: 169.90,
-        image: '/templates/imagens/max.webp',
+        image: '../imagens/max.webp',
         description: 'Whey Protein com 23g de proteína por dose. Excelente custo-benefício.',
         flavors: {
-            'baunilha': '/templates/imagens/max-baunilha.webp',
-            'chocolate': '/templates/imagens/max-chocolate.webp',
-            'morango': '/templates/imagens/max-morango.webp'
+            'baunilha': '../imagens/max-baunilha.webp',
+            'chocolate': '../imagens/max-chocolate.webp',
+            'morango': '../imagens/max-morango.webp'
         }
     },
     whey4: {
         name: 'Whey Isolado Growth',
         price: 179.90,
-        image: '/templates/imagens/iso-gro.avif',
+        image: '../imagens/iso-gro.avif',
         description: 'Whey Isolado premium com 26g de proteína por dose. Alta absorção.',
         flavors: {
-            'baunilha': '/templates/imagens/grow-baunilha.webp',
-            'chocolate': '/templates/imagens/grow-chocolate.webp',
-            'morango': '/templates/imagens/grow-morango.jpg'
+            'baunilha': '../imagens/grow-baunilha.webp',
+            'chocolate': '../imagens/grow-chocolate.webp',
+            'morango': '../imagens/grow-morango.jpg'
         }
     },
 
@@ -50,28 +50,28 @@ const products = {
     creatina1: {
         name: 'Creatina Monohidratada Growth',
         price: 89.90,
-        image: '/templates/imagens/creatina-grow.jpg',
+        image: '../imagens/creatina-grow.jpg',
         description: 'Creatina monohidratada pura, 300g. Aumenta a força e o volume muscular.',
         hasFlavors: false
     },
     creatina2: {
         name: 'Creatina HCL Max Titanium',
         price: 99.90,
-        image: '/templates/imagens/creatina-max.jpg',
+        image: '../imagens/creatina-max.jpg',
         description: 'Creatina HCL com melhor absorção. 120 cápsulas.',
         hasFlavors: false
     },
     creatina3: {
         name: 'Creatina Creapure Probiótica',
         price: 129.90,
-        image: '/templates/imagens/creatina-probiotica.jpg',
+        image: '../imagens/creatina-probiotica.jpg',
         description: 'Creatina Creapure alemã, 300g. Máxima pureza e eficácia.',
         hasFlavors: false
     },
     creatina4: {
         name: 'Creatina intregral',
         price: 129.90,
-        image: '/templates/imagens/creatina-integral.webp',
+        image: '../imagens/creatina-integral.webp',
         description: 'Creatina intregral, 300g. Máxima pureza e eficácia.',
         hasFlavors: false
     },
@@ -83,9 +83,9 @@ const products = {
         image: 'https://via.placeholder.com/400x400',
         description: 'Hipercalórico premium com 50g de proteína por dose. Ideal para ganho de peso e massa muscular.',
         flavors: {
-            'baunilha': '/templates/imagens/mass-probiotica-baulinha.webp',
-            'chocolate': '/templates/imagens/mass-probiotica-chocolate.webp',
-            'morango': '/templates/imagens/mass-probiotica-morango.webp'
+            'baunilha': '../imagens/mass-probiotica-baulinha.webp',
+            'chocolate': '../imagens/mass-probiotica-chocolate.webp',
+            'morango': '../imagens/mass-probiotica-morango.webp'
         }
     },
     mass2: {
@@ -94,9 +94,9 @@ const products = {
         image: 'https://via.placeholder.com/400x400',
         description: 'Hipercalórico com 55g de proteína por dose. Rico em carboidratos complexos.',
         flavors: {
-            'baunilha': '/templates/imagens/mass-probiotica-baulinha.webp',
-            'chocolate': '/templates/imagens/mass-probiotica-chocolate.webp',
-            'morango': '/templates/imagens/mass-probiotica-morango.webp'
+            'baunilha': '../imagens/mass-probiotica-baulinha.webp',
+            'chocolate': '../imagens/mass-probiotica-chocolate.webp',
+            'morango': '../imagens/mass-probiotica-morango.webp'
         }
     },
     mass3: {
@@ -105,9 +105,9 @@ const products = {
         image: 'https://via.placeholder.com/400x400',
         description: 'Hipercalórico com 48g de proteína por dose. Excelente custo-benefício.',
         flavors: {
-            'baunilha': '/templates/imagens/mass-grow-baunilha.webp',
-            'chocolate': '  /templates/imagens/mass-grow-chocolate.jpg',
-            'morango': '/templates/imagens/mass-grow-morango.webp'
+            'baunilha': '../imagens/mass-grow-baunilha.webp',
+            'chocolate': '  ../imagens/mass-grow-chocolate.jpg',
+            'morango': '../imagens/mass-grow-morango.webp'
         }
     },
     mass4: {
@@ -116,9 +116,9 @@ const products = {
         image: 'https://via.placeholder.com/400x400',
         description: 'Hipercalórico com 48g de proteína por dose. Excelente custo-benefício.',
         flavors: {
-            'baunilha': '/templates/imagens/mass-integral-baunilha.webp',
-            'chocolate': '  /templates/imagens/mass-integral-chocolate.webp',
-            'morango': '/templates/imagens/mass-integral-morango.webp'
+            'baunilha': '../imagens/mass-integral-baunilha.webp',
+            'chocolate': '  ../imagens/mass-integral-chocolate.webp',
+            'morango': '../imagens/mass-integral-morango.webp'
         }
     },
 
@@ -126,28 +126,28 @@ const products = {
     pre1: {
         name: 'Pre-Workout intregral',
         price: 129.90,
-        image: '/templates/imagens/pre-integral.jpg',
+        image: '../imagens/pre-integral.jpg',
         description: 'Pré-treino com cafeína, beta-alanina e creatina. Aumenta a energia e o foco durante o treino.',
         hasFlavors: false
     },
     pre2: {
         name: 'Pre-Workout Black Max',
         price: 139.90,
-        image: '/templates/imagens/pre-max.jpg',
+        image: '../imagens/pre-max.jpg',
         description: 'Pré-treino com alta concentração de cafeína e beta-alanina. Máximo foco e energia.',
         hasFlavors: false
     },
         pre3: {
             name: 'Pre-Workout Growth',
             price: 119.90,
-            image: '/templates/imagens/pre-grow.webp',
+            image: '../imagens/pre-grow.webp',
             description: 'Pré-treino com fórmula balanceada. Ideal para iniciantes e intermediários.',
             hasFlavors: false
         },
     pre4: {
         name: 'Pre-Workout Bope',
         price: 90.90,
-        image: '/templates/imagens/pre-bope.webp',
+        image: '../imagens/pre-bope.webp',
         description: 'Pré-treino com fórmula balanceada. Ideal para iniciantes e intermediários.',
         hasFlavors: false
     },
@@ -160,9 +160,9 @@ const products = {
         image: 'https://via.placeholder.com/400x400',
         description: 'Barra de proteína com 20g de proteína. Snack perfeito para qualquer hora do dia.',
         flavors: {
-            'chocolate': '/templates/imagens/barra-growth-chocolate.webp',
-            'caramelo': '/templates/imagens/barra-growth-caramelo.webp',
-            'cookies': '/templates/imagens/barra-growth-cookies.webp'
+            'chocolate': '../imagens/barra-growth-chocolate.webp',
+            'caramelo': '../imagens/barra-growth-caramelo.webp',
+            'cookies': '../imagens/barra-growth-cookies.webp'
         }
     },
     barra2: {
@@ -171,9 +171,9 @@ const products = {
         image: 'https://via.placeholder.com/400x400',
         description: 'Barra de proteína premium com 22g de proteína. Baixo teor de açúcar.',
         flavors: {
-            'chocolate': '/templates/imagens/barra-max-chocolate.webp',
-            'caramelo': '/templates/imagens/barra-max-caramelo.webp',
-            'cookies': '/templates/imagens/barra-max-cookies.webp'
+            'chocolate': '../imagens/barra-max-chocolate.webp',
+            'caramelo': '../imagens/barra-max-caramelo.webp',
+            'cookies': '../imagens/barra-max-cookies.webp'
         }
     },
     barra3: {
@@ -182,9 +182,9 @@ const products = {
         image: 'https://via.placeholder.com/400x400',
         description: 'Barra de proteína com 21g de proteína. Rico em fibras e proteínas.',
         flavors: {
-            'chocolate': '/templates/imagens/barra-pro-chocolate.webp',
-            'caramelo': '/templates/imagens/barra-pro-caramelo.webp',
-            'cookies': '/templates/imagens/barra-pro-cookies.webp'
+            'chocolate': '../imagens/barra-pro-chocolate.webp',
+            'caramelo': '../imagens/barra-pro-caramelo.webp',
+            'cookies': '../imagens/barra-pro-cookies.webp'
         }
     }
 };
