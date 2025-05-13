@@ -8,7 +8,7 @@ const products = {
         description: 'Whey Protein de alta qualidade, com 24g de proteína por dose. Ideal para ganho de massa muscular e recuperação pós-treino.',
         flavors: {
             'baunilha': '../imagens/gold-baunilha.webp',
-            'chocolate': '../imagens/gold-chocolate.jpg',
+            'chocolate': '../imagens/gold-chocolate.png',
             'morango': '../imagens/gold-morango.webp'
         }
     },
@@ -57,14 +57,14 @@ const products = {
     creatina2: {
         name: 'Creatina HCL Max Titanium',
         price: 99.90,
-        image: '../imagens/creatina-max.jpg',
+        image: '../imagens/creatina-max.webp',
         description: 'Creatina HCL com melhor absorção. 120 cápsulas.',
         hasFlavors: false
     },
     creatina3: {
         name: 'Creatina Creapure Probiótica',
         price: 129.90,
-        image: '../imagens/creatina-probiotica.jpg',
+        image: '../imagens/creatina-probiotica.webp',
         description: 'Creatina Creapure alemã, 300g. Máxima pureza e eficácia.',
         hasFlavors: false
     },
@@ -83,9 +83,9 @@ const products = {
         image: 'https://via.placeholder.com/400x400',
         description: 'Hipercalórico premium com 50g de proteína por dose. Ideal para ganho de peso e massa muscular.',
         flavors: {
-            'baunilha': '../imagens/mass-probiotica-baulinha.webp',
-            'chocolate': '../imagens/mass-probiotica-chocolate.webp',
-            'morango': '../imagens/mass-probiotica-morango.webp'
+            'baunilha': '../imagens/mass-max-baunilha.webp',
+            'chocolate': '../imagens/mass-max-chocolate.webp',
+            'morango': '../imagens/mass-max-morango.webp'
         }
     },
     mass2: {
@@ -126,14 +126,14 @@ const products = {
     pre1: {
         name: 'Pre-Workout intregral',
         price: 129.90,
-        image: '../imagens/pre-integral.jpg',
+        image: '../imagens/pre-integral.webp',
         description: 'Pré-treino com cafeína, beta-alanina e creatina. Aumenta a energia e o foco durante o treino.',
         hasFlavors: false
     },
     pre2: {
         name: 'Pre-Workout Black Max',
         price: 139.90,
-        image: '../imagens/pre-max.jpg',
+        image: '../imagens/pre-max.webp',
         description: 'Pré-treino com alta concentração de cafeína e beta-alanina. Máximo foco e energia.',
         hasFlavors: false
     },
