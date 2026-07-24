@@ -36,15 +36,17 @@ function GoldRings({ speed }: { speed: number }) {
 }
 
 export function LoginScene() {
-  const isMobile = useMediaQuery("(max-width: 1023px)");
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
   const prefersReducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
+
+  if (!isDesktop) return null;
 
   return (
     <CanvasErrorBoundary>
       <Canvas
-        dpr={isMobile ? 1 : [1, 1.5]}
-        gl={{ antialias: !isMobile, alpha: true, powerPreference: "low-power" }}
-        camera={{ position: [0, 0, isMobile ? 6.6 : 4.4], fov: 40 }}
+        dpr={[1, 1.5]}
+        gl={{ antialias: true, alpha: true, powerPreference: "low-power" }}
+        camera={{ position: [0, 0, 4.4], fov: 40 }}
         className="!absolute inset-0"
       >
         <ambientLight intensity={0.7} />
