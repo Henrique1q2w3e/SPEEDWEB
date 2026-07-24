@@ -46,9 +46,9 @@ export function Navbar() {
         <div className="hidden items-center gap-4 md:flex">
           <Link
             href="/login"
-            className="border-b border-ivory/30 pb-0.5 text-xs font-medium uppercase tracking-[0.15em] text-ivory transition-colors hover:border-brand-gold hover:text-brand-gold"
+            className="border border-brand-gold/60 px-5 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-brand-gold transition-colors hover:bg-brand-gold hover:text-ink"
           >
-            Área do Cliente
+            Login
           </Link>
         </div>
 

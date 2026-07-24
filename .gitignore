@@ -26,3 +26,5 @@ next-env.d.ts
 .dev-server.log
 .diag*
 supabase/.temp
+
+.vercel

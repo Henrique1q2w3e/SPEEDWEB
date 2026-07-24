@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LogOut, ExternalLink } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { signOut } from "@/app/actions/auth";
+import { isAdminEmail } from "@/lib/admin";
 import { Logo } from "@/components/ui/Logo";
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -12,6 +13,11 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   } = await supabase.auth.getUser();
 
   if (!user) redirect("/login?redirect=/admin");
+
+  if (!isAdminEmail(user.email)) {
+    await supabase.auth.signOut();
+    redirect("/login?error=unauthorized");
+  }
 
   return (
     <div className="min-h-dvh">

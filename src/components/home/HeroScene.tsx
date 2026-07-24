@@ -18,7 +18,7 @@ function GoldKnot({ speed, segments }: { speed: number; segments: [number, numbe
   return (
     <mesh ref={meshRef} rotation={[0.4, 0.2, 0]}>
       <torusKnotGeometry args={[1.15, 0.34, segments[0], segments[1], 2, 3]} />
-      <meshStandardMaterial color="#c9a24b" metalness={1} roughness={0.22} envMapIntensity={1.2} />
+      <meshStandardMaterial color="#c9a24b" metalness={0.85} roughness={0.28} envMapIntensity={1.2} />
     </mesh>
   );
 }
@@ -35,10 +35,11 @@ export function HeroScene() {
         camera={{ position: [0, 0, isMobile ? 7.4 : 5.2], fov: 40 }}
         className="!absolute inset-0"
       >
-        <ambientLight intensity={0.35} />
-        <pointLight position={[4, 3, 5]} intensity={120} color="#f3efe4" />
-        <pointLight position={[-4, -2, -3]} intensity={60} color="#c9a24b" />
-        <directionalLight position={[0, 4, 2]} intensity={0.6} color="#ddc07c" />
+        <ambientLight intensity={0.7} />
+        <hemisphereLight args={["#f3efe4", "#3a2f18", 0.9]} />
+        <pointLight position={[4, 3, 5]} intensity={140} color="#f3efe4" />
+        <pointLight position={[-4, -2, -3]} intensity={80} color="#c9a24b" />
+        <directionalLight position={[0, 4, 2]} intensity={0.8} color="#ddc07c" />
         <GoldKnot
           speed={prefersReducedMotion ? 0.05 : 1}
           segments={isMobile ? [110, 16] : [220, 32]}

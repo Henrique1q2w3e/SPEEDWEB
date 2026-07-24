@@ -6,7 +6,7 @@ import { LoginScene } from "@/components/auth/LoginScene";
 import { Logo } from "@/components/ui/Logo";
 
 export const metadata: Metadata = {
-  title: "Área do Cliente",
+  title: "Login",
   robots: { index: false, follow: false },
 };
 
@@ -19,7 +19,7 @@ export default function LoginPage() {
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 60% 50% at 50% 42%, rgba(10,10,9,0.85) 0%, rgba(10,10,9,0.5) 60%, rgba(10,10,9,0.2) 100%)",
+              "radial-gradient(ellipse 60% 50% at 50% 42%, rgba(10,10,9,0.55) 0%, rgba(10,10,9,0.35) 60%, rgba(10,10,9,0.1) 100%)",
           }}
         />
         <div className="hidden lg:block">
@@ -45,8 +45,8 @@ export default function LoginPage() {
         <Link href="/" className="mb-10">
           <Logo />
         </Link>
-        <h1 className="mb-2 font-serif text-3xl font-light text-ivory">Área do Cliente</h1>
-        <p className="mb-10 text-sm text-ink-muted">Acesso exclusivo para clientes Speedweb</p>
+        <h1 className="mb-2 font-serif text-3xl font-light text-ivory">Login</h1>
+        <p className="mb-10 text-sm text-ink-muted">Acesso restrito à equipe Speedweb</p>
         <Suspense>
           <LoginForm />
         </Suspense>
