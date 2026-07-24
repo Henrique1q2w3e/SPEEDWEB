@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { NAV_LINKS } from "./nav-links";
 
 type MobileNavProps = {
@@ -12,7 +12,7 @@ type MobileNavProps = {
 };
 
 export function MobileNav({ open, onClose }: MobileNavProps) {
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!open) return;
 
     const scrollY = window.scrollY;
@@ -48,14 +48,15 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 bg-ink/95 backdrop-blur-sm md:hidden"
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          className="fixed inset-0 z-50 bg-ink/98 md:hidden"
           onClick={onClose}
         >
           <motion.div
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "tween", duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ type: "tween", duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             onClick={(e) => e.stopPropagation()}
             className="ml-auto flex h-full w-[85%] max-w-sm flex-col gap-2 overflow-y-auto border-l border-ink-border bg-ink-surface p-6 sm:p-8"
           >

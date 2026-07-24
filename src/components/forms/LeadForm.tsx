@@ -52,7 +52,7 @@ export function LeadForm({ estimate }: LeadFormProps) {
 
   if (state.status === "success") {
     return (
-      <div className="relative">
+      <div className="relative isolate">
         <GoldGlow />
         <div className="relative border border-brand-gold/40 bg-ink-surface/90 p-8 text-center backdrop-blur-sm sm:p-12">
           <CheckCircle2 size={32} className="mx-auto text-brand-gold" />
@@ -77,7 +77,7 @@ export function LeadForm({ estimate }: LeadFormProps) {
   }
 
   return (
-    <div className="relative">
+    <div className="relative isolate">
       <GoldGlow />
       <form
         action={formAction}
@@ -272,11 +272,11 @@ function GoldGlow() {
   return (
     <>
       <div
-        className="pointer-events-none absolute -top-16 -left-16 -z-10 h-64 w-64 rounded-full bg-brand-gold/25 blur-[90px]"
+        className="pointer-events-none absolute -top-16 -left-16 -z-10 h-64 w-64 rounded-full bg-brand-gold/25 blur-[64px]"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-20 -right-10 -z-10 h-72 w-72 rounded-full bg-brand-gold/15 blur-[110px]"
+        className="pointer-events-none absolute -bottom-20 -right-10 -z-10 h-72 w-72 rounded-full bg-brand-gold/15 blur-[80px]"
         aria-hidden="true"
       />
     </>
