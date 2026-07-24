@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerFit Academia — Transforme seu corpo, transforme sua vida</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header" id="siteHeader">
+        <div class="wrap header-inner">
+            <a class="brand" href="#inicio">Power<em>Fit</em></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+            <nav class="nav" id="siteNav">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#modalidades" class="nav-link">Modalidades</a>
+                <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                <a href="#planos" class="nav-link">Planos</a>
+                <a href="#matricula" class="btn btn-primary btn-sm">Matricule-se</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-media"><img src="../imagens/bannar-academia.jpg" alt="Academia PowerFit ao entardecer"></div>
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-content">
+            <span class="eyebrow">Treine forte. Viva forte.</span>
+            <h1>PowerFit<br>Academia</h1>
+            <p>Transforme seu corpo, transforme sua vida.</p>
+            <a href="#matricula" class="btn btn-primary btn-lg">Matricule-se agora</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="about">
+        <div class="wrap about-grid">
+            <div>
+                <span class="eyebrow">Quem somos</span>
+                <h2>Sobre a PowerFit</h2>
+                <p class="lead">A melhor academia da região, com mais de 10 anos de experiência.</p>
+                <p>Ambiente moderno e motivador, equipado com os melhores aparelhos do mercado. Nossa equipe de profissionais qualificados está pronta para ajudar você a alcançar seus objetivos.</p>
+                <div class="feature-row">
+                    <div class="feature-box">
+                        <i class="fas fa-dumbbell"></i>
+                        <h4>Equipamentos Modernos</h4>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fas fa-users"></i>
+                        <h4>Professores Qualificados</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="about-media"><img src="../imagens/agachamento.jpg" alt="Aluna treinando na PowerFit"></div>
+        </div>
+    </section>
+
+    <section id="modalidades" class="modalities">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow">Escolha seu treino</span>
+                <h2>Nossas Modalidades</h2>
+            </div>
+            <div class="modalities-grid">
+                <article class="modality-card">
+                    <img src="../imagens/agachamento.jpg" alt="Musculação">
+                    <div class="modality-body">
+                        <h3>Musculação</h3>
+                        <p>Treinos personalizados para todos os níveis, do iniciante ao avançado.</p>
+                    </div>
+                </article>
+                <article class="modality-card">
+                    <img src="../imagens/homem-treinando.jpg" alt="Funcional">
+                    <div class="modality-body">
+                        <h3>Funcional</h3>
+                        <p>Exercícios dinâmicos que trabalham todo o corpo de forma integrada.</p>
+                    </div>
+                </article>
+                <article class="modality-card">
+                    <img src="../imagens/bannar-academia.jpg" alt="CrossFit">
+                    <div class="modality-body">
+                        <h3>CrossFit</h3>
+                        <p>Treinos de alta intensidade para melhorar força e condicionamento.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="testimonials">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow">Quem treina, aprova</span>
+                <h2>Depoimentos</h2>
+            </div>
+            <div class="testimonials-grid">
+                <blockquote class="testimonial-card">
+                    <p>"Treino na PowerFit há 2 anos e os resultados são incríveis! Professores atenciosos e ambiente motivador."</p>
+                    <footer><span class="avatar">MS</span> <div><strong>Maria Silva</strong><span>Aluna há 2 anos</span></div></footer>
+                </blockquote>
+                <blockquote class="testimonial-card">
+                    <p>"A melhor academia que já treinei! Equipamentos modernos e treinos personalizados."</p>
+                    <footer><span class="avatar">JS</span> <div><strong>João Santos</strong><span>Aluno há 1 ano</span></div></footer>
+                </blockquote>
+                <blockquote class="testimonial-card">
+                    <p>"Ambiente incrível e professores super atenciosos. Recomendo a todos!"</p>
+                    <footer><span class="avatar">AC</span> <div><strong>Ana Costa</strong><span>Aluna há 6 meses</span></div></footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <section id="estatisticas" class="stats">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow">Números que provam</span>
+                <h2>Nossos Números</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3 class="counter" data-target="2500">0</h3>
+                    <p>Alunos Ativos</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3 class="counter" data-target="15">0</h3>
+                    <p>Anos de Experiência</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <h3 class="counter" data-target="98">0</h3>
+                    <p>% Satisfação dos Alunos</p>
+                </div>
+            </div>
+            <div class="graph-container">
+                <canvas id="alunosChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <section id="planos" class="plans">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow">Invista em você</span>
+                <h2>Nossos Planos</h2>
+            </div>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h3>Básico</h3>
+                    <div class="price"><span class="value">R$ 99</span><span class="period">/mês</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Acesso à musculação</li>
+                        <li><i class="fas fa-check"></i> Avaliação física</li>
+                        <li><i class="fas fa-check"></i> Horário limitado</li>
+                    </ul>
+                    <a href="#matricula" class="btn btn-outline btn-block">Escolher plano</a>
+                </div>
+                <div class="plan-card plan-card--highlight">
+                    <span class="plan-tag">Mais popular</span>
+                    <h3>Premium</h3>
+                    <div class="price"><span class="value">R$ 149</span><span class="period">/mês</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Acesso a todas as modalidades</li>
+                        <li><i class="fas fa-check"></i> Avaliação física mensal</li>
+                        <li><i class="fas fa-check"></i> Horário ilimitado</li>
+                        <li><i class="fas fa-check"></i> Acompanhamento personalizado</li>
+                    </ul>
+                    <a href="#matricula" class="btn btn-primary btn-block">Escolher plano</a>
+                </div>
+                <div class="plan-card">
+                    <h3>Família</h3>
+                    <div class="price"><span class="value">R$ 299</span><span class="period">/mês</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Até 3 pessoas</li>
+                        <li><i class="fas fa-check"></i> Acesso a todas as modalidades</li>
+                        <li><i class="fas fa-check"></i> Avaliação física para todos</li>
+                        <li><i class="fas fa-check"></i> Horário ilimitado</li>
+                    </ul>
+                    <a href="#matricula" class="btn btn-outline btn-block">Escolher plano</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="matricula" class="enroll">
+        <div class="wrap">
+            <div class="enroll-card">
+                <div class="section-head section-head--center">
+                    <span class="eyebrow">Vamos começar</span>
+                    <h2>Matricule-se Agora</h2>
+                </div>
+                <form id="matriculaForm">
+                    <div class="form-grid">
+                        <label class="field"><span>Nome Completo</span><input type="text" id="nome" required></label>
+                        <label class="field"><span>E-mail</span><input type="email" id="email" required></label>
+                        <label class="field"><span>Telefone</span><input type="tel" id="telefone" placeholder="(11) 99999-9999" required></label>
+                        <label class="field">
+                            <span>Modalidade Desejada</span>
+                            <select id="modalidade" required>
+                                <option value="">Selecione...</option>
+                                <option value="musculacao">Musculação</option>
+                                <option value="funcional">Funcional</option>
+                                <option value="crossfit">CrossFit</option>
+                            </select>
+                        </label>
+                        <label class="field field--full">
+                            <span>Melhor Horário para Treinar</span>
+                            <select id="horario" required>
+                                <option value="">Selecione...</option>
+                                <option value="manha">Manhã (6h - 12h)</option>
+                                <option value="tarde">Tarde (12h - 18h)</option>
+                                <option value="noite">Noite (18h - 22h)</option>
+                            </select>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">Enviar Matrícula</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="wrap footer-grid">
+            <div>
+                <span class="brand">Power<em>Fit</em></span>
+                <p>Transformando vidas através do fitness.</p>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
+                <p><i class="fas fa-envelope"></i> contato@powerfit.com.br</p>
+                <p><i class="fas fa-map-marker-alt"></i> Rua da Academia, 123</p>
+            </div>
+            <div>
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

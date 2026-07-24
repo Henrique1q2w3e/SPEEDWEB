@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Gourmet — Experiência Única</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header" id="siteHeader">
+        <div class="wrap header-inner">
+            <a class="brand" href="#home">Café <em>Gourmet</em></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+            <nav class="nav" id="siteNav">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#cardapio" class="nav-link">Doces</a>
+                <a href="#cafes" class="nav-link">Cafés</a>
+                <a href="#galeria" class="nav-link">Galeria</a>
+                <a href="#localizacao" class="nav-link">Localização</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-media"><img src="../imagens/interno-cafeteria.png" alt="Interior aconchegante do Café Gourmet"></div>
+        <div class="hero-scrim"></div>
+        <div class="wrap hero-content">
+            <span class="eyebrow">Torra artesanal desde 2012</span>
+            <h1>Descubra o sabor do <em>café perfeito</em></h1>
+            <p>Uma experiência única em cada xícara, com grãos selecionados e torra artesanal.</p>
+            <a href="#cardapio" class="btn btn-primary">Ver Cardápio</a>
+        </div>
+    </section>
+
+    <section class="destaque">
+        <div class="wrap destaque-grid">
+            <div class="destaque-media">
+                <img src="../imagens/frutas-vermelhas.jpg" alt="Café especial da semana">
+            </div>
+            <div>
+                <span class="eyebrow">Destaque do mês</span>
+                <h2>Café especial da semana</h2>
+                <p>Grãos selecionados da região de Minas Gerais, com notas de chocolate e frutas vermelhas.</p>
+                <p class="preco">R$ 54,90</p>
+                <a href="#cafes" class="btn btn-outline">Saiba mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="cardapio" class="menu-section">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow">Feitos na casa</span>
+                <h2>Nossos Doces</h2>
+            </div>
+            <div class="card-grid">
+                <article class="product-card">
+                    <img src="../imagens/tiramissu.png" alt="Tiramissu">
+                    <div class="product-card-body">
+                        <h3>Tiramissu</h3>
+                        <p>Tiramissu com chocolate belga.</p>
+                        <span class="preco">R$ 12,90</span>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="../imagens/sobremesa.png" alt="Cheesecake de frutas vermelhas">
+                    <div class="product-card-body">
+                        <h3>Cheesecake</h3>
+                        <p>Tradicional com calda de frutas vermelhas.</p>
+                        <span class="preco">R$ 15,90</span>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="../imagens/croissant-chocolate.png" alt="Croissant de chocolate">
+                    <div class="product-card-body">
+                        <h3>Croissant</h3>
+                        <p>Folhado tradicional com chocolate.</p>
+                        <span class="preco">R$ 8,90</span>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="../imagens/cupcake.png" alt="Cupcake">
+                    <div class="product-card-body">
+                        <h3>Cupcake</h3>
+                        <p>Massa fofinha com cobertura artesanal.</p>
+                        <span class="preco">R$ 9,90</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="cafes" class="menu-section menu-section--alt">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow">Grãos selecionados</span>
+                <h2>Cafés Especiais</h2>
+            </div>
+            <div class="card-grid">
+                <article class="product-card">
+                    <img src="../imagens/cappuccino.png" alt="Cappuccino">
+                    <div class="product-card-body">
+                        <h3>Cappuccino</h3>
+                        <p>Cappuccino com leite vaporizado.</p>
+                        <span class="preco">R$ 45,90</span>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="../imagens/cafe-com-leite.png" alt="Café com leite">
+                    <div class="product-card-body">
+                        <h3>Café com Leite</h3>
+                        <p>Torra média com notas de caramelo e nozes.</p>
+                        <span class="preco">R$ 49,90</span>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="../imagens/cafe-gelado.png" alt="Café gelado">
+                    <div class="product-card-body">
+                        <h3>Café Gelado</h3>
+                        <p>Extração lenta servida sobre gelo.</p>
+                        <span class="preco">R$ 54,90</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="gallery">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="eyebrow">Nosso espaço</span>
+                <h2>A Cafeteria</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item gallery-item--tall"><img src="../imagens/interno-cafeteria.png" alt="Interior da cafeteria"></div>
+                <div class="gallery-item"><img src="../imagens/cafes-especiais.png" alt="Balcão de cafés especiais"></div>
+                <div class="gallery-item"><img src="../imagens/croissant-chocolate-galeria.png" alt="Vitrine de croissants"></div>
+                <div class="gallery-item gallery-item--wide"><img src="../imagens/banner-cafeteria.png" alt="Identidade Café Gourmet"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="localizacao" class="location">
+        <div class="wrap location-grid">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197577477744!2d-46.6521903!3d-23.5639993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzUwLjQiUyA0NsKwMzknMDcuOSJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" width="100%" height="420" style="border:0;" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div>
+                <span class="eyebrow">Venha nos visitar</span>
+                <h2>Nossa Localização</h2>
+                <ul class="location-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Rua do Café, 123 — Centro</li>
+                    <li><i class="fas fa-clock"></i> Segunda a Sábado: 8h às 20h</li>
+                    <li><i class="fas fa-phone"></i> (11) 9999-9999</li>
+                    <li><i class="fas fa-envelope"></i> contato@cafegourmet.com</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="wrap footer-grid">
+            <div>
+                <span class="brand">Café <em>Gourmet</em></span>
+                <p>Qualidade e sabor em cada xícara.</p>
+            </div>
+            <div>
+                <h4>Newsletter</h4>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Seu e-mail" required>
+                    <button type="submit">Assinar</button>
+                </form>
+            </div>
+            <div>
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,107 +1,49 @@
-# Portfólio de Templates SPEEDWEB
+# SPEEDWEB
 
-Este é um portfólio moderno de templates de sites, desenvolvido com HTML, CSS e JavaScript. O projeto apresenta uma coleção de templates prontos para diferentes tipos de negócios, com foco em design responsivo e experiência do usuário.
+Site institucional da SPEEDWEB — agência de criação de sites. Reescrito em Next.js
+(App Router) + TypeScript + Tailwind CSS, com área de cliente/admin autenticada via
+Supabase para gestão dos leads gerados pelo site.
 
-## Características
+## Stack
 
-- Design moderno e responsivo
-- Tema escuro com detalhes em dourado
-- Animações suaves e interativas
-- Visualização de templates em tela cheia
-- Sistema de filtro por categorias
-- Interface intuitiva e amigável
+- [Next.js 16](https://nextjs.org/) (App Router, Turbopack)
+- TypeScript + Tailwind CSS v4
+- [Framer Motion](https://motion.dev/) para animações de entrada
+- [Supabase](https://supabase.com/) (Postgres + Auth) para leads e login
+- Deploy na [Vercel](https://vercel.com/)
 
-## Templates Disponíveis
-
-### Barbearia Moderna
-- Sistema de agendamento online
-- Galeria de trabalhos
-- Lista de serviços e preços
-- Integração com mapas
-- Design responsivo
-
-### E-commerce Premium
-- Catálogo de produtos
-- Carrinho de compras
-- Sistema de pagamentos
-- Área do cliente
-- Painel administrativo
-
-### Site Institucional
-- Páginas informativas
-- Blog integrado
-- Formulário de contato
-- SEO otimizado
-- Design profissional
-
-## Tecnologias Utilizadas
-
-- HTML5
-- CSS3 (com variáveis CSS)
-- JavaScript (ES6+)
-- Bootstrap 5
-- Font Awesome
-- AOS (Animate On Scroll)
-
-## Estrutura do Projeto
+## Estrutura
 
 ```
-speedweb/
-├── portfolio.html          # Página principal do portfólio
-├── portfolio.css          # Estilos do portfólio
-├── portfolio.js           # Scripts do portfólio
-├── templates/             # Diretório de templates
-│   ├── barbearia/        # Template de barbearia
-│   ├── ecommerce/        # Template de e-commerce
-│   └── institucional/    # Template institucional
-└── imagens/              # Imagens do projeto
+src/
+├── app/            # rotas (App Router): landing, /portfolio, /login, /admin
+├── components/      # componentes de UI, layout, landing, portfólio, formulários
+├── lib/              # config do site, precificação da calculadora, Supabase, leads
+└── middleware.ts     # protege as rotas /admin
+
+public/
+├── imagens/          # assets da marca (logo, hero, mascote)
+└── templates/         # templates de demonstração (sites estáticos autocontidos,
+                        # servidos como estão e abertos via iframe em /portfolio)
 ```
 
-## Como Usar
+## Rodando localmente
 
-1. Clone o repositório
-2. Abra o arquivo `portfolio.html` em seu navegador
-3. Navegue pelos templates disponíveis
-4. Clique em "Visualizar" para ver o template em tela cheia
-
-## Personalização
-
-### Cores
-As cores podem ser personalizadas através das variáveis CSS no arquivo `portfolio.css`:
-
-```css
-:root {
-    --primary-color: #D4AF37;
-    --secondary-color: #1a1a1a;
-    --text-color: #ffffff;
-    --bg-color: #121212;
-    --card-bg: #1e1e1e;
-    --overlay-bg: rgba(0, 0, 0, 0.8);
-}
+```bash
+npm install
+cp .env.local.example .env.local   # preencha com as credenciais do Supabase
+npm run dev
 ```
 
-### Adicionar Novos Templates
-Para adicionar um novo template:
+O app sobe em `http://localhost:3000` (ou próxima porta livre).
 
-1. Crie uma nova pasta em `templates/`
-2. Adicione os arquivos do template (HTML, CSS, JS)
-3. Adicione uma nova entrada no grid de templates em `portfolio.html`
-4. Atualize o JavaScript para incluir o novo template
+## Variáveis de ambiente
 
-## Contribuição
+Ver `.env.local.example`. `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+vêm de um projeto Supabase (Settings → API). `SUPABASE_SERVICE_ROLE_KEY` é usada apenas
+em ações administrativas no servidor — nunca deve ser exposta ao client.
 
-Contribuições são bem-vindas! Para contribuir:
+## Deploy
 
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/nova-feature`)
-5. Abra um Pull Request
-
-## Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## Contato
-
-Para mais informações ou suporte, entre em contato através do email: contato@speedweb.com 
+Conecte o repositório na Vercel — a detecção de Next.js é automática. Configure as
+mesmas variáveis de ambiente em Production e Preview antes do primeiro deploy.
