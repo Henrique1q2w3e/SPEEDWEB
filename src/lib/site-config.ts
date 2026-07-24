@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   name: "SPEEDWEB",
-  url: "https://speedweb.com.br",
+  url: "https://speedweb-rho.vercel.app",
   description:
     "Criação de sites profissionais, rápidos e modernos para impulsionar sua presença online.",
   email: "speedweb26@gmail.com",
