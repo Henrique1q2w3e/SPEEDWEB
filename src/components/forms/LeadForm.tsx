@@ -54,7 +54,7 @@ export function LeadForm({ estimate }: LeadFormProps) {
     return (
       <div className="relative isolate">
         <GoldGlow />
-        <div className="relative border border-brand-gold/40 bg-ink-surface/90 p-8 text-center backdrop-blur-sm sm:p-12">
+        <div className="relative border border-brand-gold/40 bg-ink-surface/90 p-8 text-center sm:p-12">
           <CheckCircle2 size={32} className="mx-auto text-brand-gold" />
           <h3 className="mt-5 font-serif text-3xl font-light text-ivory">
             Recebemos seu pedido!
@@ -91,7 +91,7 @@ export function LeadForm({ estimate }: LeadFormProps) {
             });
           }
         }}
-        className="relative border border-brand-gold/20 bg-ink-surface/90 p-6 backdrop-blur-sm sm:p-12"
+        className="relative border border-brand-gold/20 bg-ink-surface/90 p-6 sm:p-12"
       >
         <input type="hidden" name="estimated_price" value={estimate?.total || ""} />
 
@@ -272,11 +272,11 @@ function GoldGlow() {
   return (
     <>
       <div
-        className="pointer-events-none absolute -top-16 -left-16 -z-10 h-64 w-64 rounded-full bg-brand-gold/25 blur-[64px]"
+        className="pointer-events-none absolute -top-8 -left-8 -z-10 h-48 w-48 rounded-full bg-brand-gold/25 blur-[56px] sm:-top-16 sm:-left-16 sm:h-64 sm:w-64 sm:blur-[64px]"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -bottom-20 -right-10 -z-10 h-72 w-72 rounded-full bg-brand-gold/15 blur-[80px]"
+        className="pointer-events-none absolute -bottom-10 -right-6 -z-10 h-52 w-52 rounded-full bg-brand-gold/15 blur-[64px] sm:-bottom-20 sm:-right-10 sm:h-72 sm:w-72 sm:blur-[80px]"
         aria-hidden="true"
       />
     </>

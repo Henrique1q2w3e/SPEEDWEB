@@ -65,7 +65,7 @@ export function BudgetAndLeadFlow() {
             </a>
           </Reveal>
 
-          <Reveal delay={0.1} className="mt-12 text-left">
+          <Reveal delay={0.1} y={0} className="mt-12 text-left">
             <LeadForm estimate={estimate} />
           </Reveal>
         </div>
