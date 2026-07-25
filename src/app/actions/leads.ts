@@ -2,7 +2,8 @@
 
 import { revalidatePath } from "next/cache";
 import { leadSchema } from "@/lib/validations/lead";
-import { insertLead, updateLeadStatus, updateLeadNotes } from "@/lib/leads";
+import { insertLead, updateLeadStatus, updateLeadNotes, updateLeadPreviewUrl } from "@/lib/leads";
+import { sendClientAccessLink } from "@/lib/client-access";
 import type { LeadStatus } from "@/types/database.types";
 
 export type SubmitLeadState = {
@@ -45,7 +46,6 @@ export async function submitLead(
 
   try {
     await insertLead(parsed.data);
-    return { status: "success" };
   } catch (error) {
     console.error("submitLead insert failed:", error);
     return {
@@ -53,6 +53,16 @@ export async function submitLead(
       message: "Não foi possível enviar seu pedido agora. Tente novamente em instantes.",
     };
   }
+
+  try {
+    await sendClientAccessLink(parsed.data.email);
+  } catch (error) {
+    // O pedido já foi salvo — o link de acesso é um bônus, não deve
+    // derrubar a confirmação de envio se o e-mail falhar.
+    console.error("sendClientAccessLink failed:", error);
+  }
+
+  return { status: "success" };
 }
 
 export async function changeLeadStatus(id: string, status: LeadStatus) {
@@ -63,4 +73,10 @@ export async function changeLeadStatus(id: string, status: LeadStatus) {
 export async function saveLeadNotes(id: string, adminNotes: string) {
   await updateLeadNotes(id, adminNotes);
   revalidatePath("/admin");
+}
+
+export async function saveLeadPreviewUrl(id: string, previewUrl: string) {
+  await updateLeadPreviewUrl(id, previewUrl);
+  revalidatePath("/admin");
+  revalidatePath("/cliente");
 }

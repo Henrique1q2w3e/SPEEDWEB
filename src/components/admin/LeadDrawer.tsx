@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X, Mail, Phone, Building2, Check } from "lucide-react";
 import { useState, useTransition } from "react";
 import type { Lead, LeadStatus } from "@/types/database.types";
-import { changeLeadStatus, saveLeadNotes } from "@/app/actions/leads";
+import { changeLeadStatus, saveLeadNotes, saveLeadPreviewUrl } from "@/app/actions/leads";
 import { STATUS_OPTIONS } from "./LeadStatusBadge";
 import { formatPrice } from "@/lib/pricing";
 
@@ -121,11 +121,51 @@ export function LeadDrawer({ lead, onClose }: LeadDrawerProps) {
               <Detail label="Recebido em" value={new Date(lead.created_at).toLocaleString("pt-BR")} />
             </dl>
 
+            <PreviewUrlField leadId={lead.id} initialValue={lead.preview_url ?? ""} />
             <NotesField leadId={lead.id} initialValue={lead.admin_notes ?? ""} />
           </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
+  );
+}
+
+function PreviewUrlField({ leadId, initialValue }: { leadId: string; initialValue: string }) {
+  const [value, setValue] = useState(initialValue);
+  const [saved, setSaved] = useState(false);
+  const [isPending, startTransition] = useTransition();
+
+  const handleBlur = () => {
+    if (value === initialValue) return;
+    startTransition(async () => {
+      await saveLeadPreviewUrl(leadId, value);
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2000);
+    });
+  };
+
+  return (
+    <div className="mt-8 border-t border-ink-border pt-6">
+      <div className="mb-2 flex items-center justify-between">
+        <span className="text-xs uppercase tracking-wide text-ink-muted/70">
+          Link do site pronto (o cliente vê isso na área dele)
+        </span>
+        {isPending && <span className="text-xs text-ink-muted">Salvando...</span>}
+        {saved && !isPending && (
+          <span className="flex items-center gap-1 text-xs text-brand-gold">
+            <Check size={12} /> Salvo
+          </span>
+        )}
+      </div>
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        onBlur={handleBlur}
+        placeholder="https://preview-do-site.vercel.app"
+        className="w-full border border-ink-border bg-ink px-3 py-2.5 text-sm text-ivory placeholder:text-ink-muted/50 focus:border-brand-gold focus:outline-none"
+      />
+    </div>
   );
 }
 

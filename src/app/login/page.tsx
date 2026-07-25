@@ -41,10 +41,14 @@ export default function LoginPage() {
           <LoginBadge />
         </div>
         <h1 className="mb-2 font-serif text-3xl font-light text-ivory">Login</h1>
-        <p className="mb-10 text-sm text-ink-muted">Acesso restrito à equipe Speedweb</p>
+        <p className="mb-10 text-sm text-ink-muted">Acesse sua conta Speedweb</p>
         <Suspense>
           <LoginForm />
         </Suspense>
+        <p className="mt-8 max-w-xs text-center text-xs text-ink-muted">
+          É cliente? Você recebe automaticamente um link de acesso por e-mail depois de enviar
+          seu pedido de orçamento — não precisa de senha.
+        </p>
       </div>
     </div>
   );

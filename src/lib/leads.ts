@@ -45,3 +45,24 @@ export async function updateLeadNotes(id: string, adminNotes: string) {
     .eq("id", id);
   if (error) throw error;
 }
+
+export async function updateLeadPreviewUrl(id: string, previewUrl: string) {
+  const supabase = await createClient();
+  const { error } = await supabase
+    .from("leads")
+    .update({ preview_url: previewUrl || null })
+    .eq("id", id);
+  if (error) throw error;
+}
+
+export async function listOwnLeads(email: string) {
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("leads")
+    .select("*")
+    .ilike("email", email)
+    .order("created_at", { ascending: false });
+
+  if (error) throw error;
+  return data;
+}

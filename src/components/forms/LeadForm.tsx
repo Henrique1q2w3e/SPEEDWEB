@@ -61,7 +61,8 @@ export function LeadForm({ estimate }: LeadFormProps) {
           </h3>
           <p className="mt-3 text-ink-muted">
             Vamos analisar o que você nos contou e entraremos em contato em até 24h com um
-            orçamento personalizado. Se preferir, fale com a gente agora mesmo pelo WhatsApp.
+            orçamento personalizado. Enviamos também um link de acesso pro seu e-mail — por ele
+            você acompanha o status do seu pedido a qualquer momento.
           </p>
           <a
             href={whatsappLink("Olá! Acabei de enviar um pedido de orçamento pelo site.")}

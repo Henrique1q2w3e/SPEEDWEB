@@ -29,11 +29,18 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   const isAdminRoute = request.nextUrl.pathname.startsWith("/admin");
+  const isClientRoute = request.nextUrl.pathname.startsWith("/cliente");
 
   if (isAdminRoute && !(user && isAdminEmail(user.email))) {
     const redirectUrl = new URL("/login", request.url);
     redirectUrl.searchParams.set("redirect", request.nextUrl.pathname);
     if (user) redirectUrl.searchParams.set("error", "unauthorized");
+    return NextResponse.redirect(redirectUrl);
+  }
+
+  if (isClientRoute && !user) {
+    const redirectUrl = new URL("/login", request.url);
+    redirectUrl.searchParams.set("redirect", request.nextUrl.pathname);
     return NextResponse.redirect(redirectUrl);
   }
 

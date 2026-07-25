@@ -48,11 +48,12 @@ export function LoginForm() {
   const searchParams = useSearchParams();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(
-    searchParams.get("error") === "unauthorized"
-      ? "Essa conta não tem acesso ao painel administrativo."
-      : ""
-  );
+  const [error, setError] = useState(() => {
+    const errorParam = searchParams.get("error");
+    if (errorParam === "unauthorized") return "Essa conta não tem acesso ao painel administrativo.";
+    if (errorParam === "link_invalido") return "Esse link expirou ou já foi usado. Solicite um novo.";
+    return "";
+  });
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {

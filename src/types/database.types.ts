@@ -25,6 +25,7 @@ export type Lead = {
   additional_info: string | null;
 
   admin_notes: string | null;
+  preview_url: string | null;
 };
 
 export type Database = {
@@ -32,8 +33,8 @@ export type Database = {
     Tables: {
       leads: {
         Row: Lead;
-        Insert: Omit<Lead, "id" | "created_at" | "status" | "admin_notes"> &
-          Partial<Pick<Lead, "status" | "admin_notes">>;
+        Insert: Omit<Lead, "id" | "created_at" | "status" | "admin_notes" | "preview_url"> &
+          Partial<Pick<Lead, "status" | "admin_notes" | "preview_url">>;
         Update: Partial<Omit<Lead, "id" | "created_at">>;
         Relationships: [];
       };
