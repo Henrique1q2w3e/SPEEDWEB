@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState, useState, type ReactNode } from "react";
-import { Loader2, CheckCircle2, AlertCircle, Building2, User, Mail, Phone, Link2 } from "lucide-react";
+import { Loader2, CheckCircle2, AlertCircle, Building2, User, Mail, Phone, Link2, Check } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/icons";
 import { submitLead, type SubmitLeadState } from "@/app/actions/leads";
 import { SITE_TYPES, FEATURES, type SiteType, type FeatureId } from "@/lib/pricing";
@@ -30,12 +30,27 @@ const TARGET_AUDIENCE_OPTIONS = [
   "Todos os públicos",
 ];
 
+const COLOR_OPTIONS = [
+  { id: "dourado", label: "Dourado", hex: "#c9a24b", dark: true },
+  { id: "preto", label: "Preto elegante", hex: "#0a0a09", dark: false },
+  { id: "branco", label: "Branco / Off-white", hex: "#f3efe4", dark: true },
+  { id: "azul-marinho", label: "Azul marinho", hex: "#1c2b4a", dark: false },
+  { id: "azul-vibrante", label: "Azul vibrante", hex: "#2e6bff", dark: false },
+  { id: "verde-esmeralda", label: "Verde esmeralda", hex: "#0f5132", dark: false },
+  { id: "vinho", label: "Vinho / Bordô", hex: "#6b1f2a", dark: false },
+  { id: "rosa", label: "Rosa suave", hex: "#d9a5b3", dark: true },
+  { id: "bege", label: "Bege / Nude", hex: "#c9b79c", dark: true },
+  { id: "cinza-grafite", label: "Cinza grafite", hex: "#3a3a3a", dark: false },
+] as const;
+
 export function LeadForm({ estimate }: LeadFormProps) {
   const [state, formAction, isPending] = useActionState(submitLead, initialState);
   const [projectType, setProjectType] = useState<SiteType | "">(estimate?.type ?? "");
   const [features, setFeatures] = useState<FeatureId[]>(estimate?.features ?? []);
   const [typeError, setTypeError] = useState(false);
   const [targetAudience, setTargetAudience] = useState("");
+  const [selectedColors, setSelectedColors] = useState<string[]>([]);
+  const [colorNote, setColorNote] = useState("");
 
   // Sync local selection when the calculator produces a new estimate, without
   // an extra effect render pass (react.dev/learn/you-might-not-need-an-effect).
@@ -49,6 +64,14 @@ export function LeadForm({ estimate }: LeadFormProps) {
   const toggleFeature = (id: FeatureId) => {
     setFeatures((prev) => (prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]));
   };
+
+  const toggleColor = (label: string) => {
+    setSelectedColors((prev) =>
+      prev.includes(label) ? prev.filter((c) => c !== label) : [...prev, label]
+    );
+  };
+
+  const colorSchemeValue = [...selectedColors, colorNote.trim()].filter(Boolean).join(", ");
 
   if (state.status === "success") {
     return (
@@ -209,6 +232,46 @@ export function LeadForm({ estimate }: LeadFormProps) {
               </label>
             ))}
           </div>
+        </div>
+
+        <div className="mt-8">
+          <span className="mb-3 block text-xs uppercase tracking-[0.15em] text-ink-muted">
+            Cores que você gostaria no site
+          </span>
+          <div className="flex flex-wrap gap-x-4 gap-y-3">
+            {COLOR_OPTIONS.map((color) => {
+              const checked = selectedColors.includes(color.label);
+              return (
+                <label key={color.id} className="flex cursor-pointer flex-col items-center gap-1.5">
+                  <input
+                    type="checkbox"
+                    checked={checked}
+                    onChange={() => toggleColor(color.label)}
+                    className="sr-only"
+                  />
+                  <span
+                    className={`flex h-9 w-9 items-center justify-center rounded-full border-2 transition-all ${
+                      checked ? "border-brand-gold scale-110" : "border-ink-border hover:border-ink-muted"
+                    }`}
+                    style={{ backgroundColor: color.hex }}
+                  >
+                    {checked && <Check size={14} className={color.dark ? "text-ink" : "text-ivory"} />}
+                  </span>
+                  <span className="max-w-[4.5rem] text-center text-[0.62rem] leading-tight text-ink-muted">
+                    {color.label}
+                  </span>
+                </label>
+              );
+            })}
+          </div>
+          <input
+            type="text"
+            value={colorNote}
+            onChange={(e) => setColorNote(e.target.value)}
+            placeholder="Outra cor ou observação (opcional)"
+            className="mt-4 w-full border-b border-ink-border bg-transparent py-2 text-sm text-ivory placeholder:text-ink-muted/50 outline-none focus:border-brand-gold"
+          />
+          <input type="hidden" name="color_scheme" value={colorSchemeValue} />
         </div>
 
         <div className="mt-8 max-w-xs">
